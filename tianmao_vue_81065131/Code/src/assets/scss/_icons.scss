@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?hl4wq');
+  src:  url('../fonts/icomoon.eot?hl4wq#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?hl4wq') format('truetype'),
+    url('../fonts/icomoon.woff?hl4wq') format('woff'),
+    url('../fonts/icomoon.svg?hl4wq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.iconfont {
+  font-family: "icomoon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// 加
+.icon-jia:before {
+  content: "\e65a";
+}
+// 减
+.icon-minus:before {
+  content: "\e502";
+}
+// 打钩
+.icon-dagou:before {
+  content: "\e501";
+}
+// 打钩
+.icon-weibiaoti:before {
+  content: "\e506";
+}
+// 感叹号
+.icon-gantanhao:before {
+  content: "\e635";
+}
+// 地址
+.icon-dizhi:before {
+  content: "\e545";
+}
+// 打印机
+.icon-x:before {
+  content: "\78";
+}
+// 待付款
+.icon-daifukuan:before {
+  content: "\e519";
+}
+// 待收货
+.icon-daishouhuo:before {
+  content: "\e603";
+}
+.icon-scan:before {
+  content: "\e609";
+}
+// 我的订单
+.icon-wodedingdan:before {
+  content: "\e60b";
+}
+// 圆×
+.icon-close:before {
+  content: "\e60c";
+}
+// 返回
+.icon-back:before {
+  content: "\e60f";
+}
+// 人
+.icon-personal:before {
+  content: "\e610";
+}
+// 退出登录
+.icon-tuichudenglu:before {
+  content: "\e611";
+}
+// 售后地址
+.icon-shouhuodizhi:before {
+  content: "\e614";
+}
+.icon-search:before {
+  content: "\e616";
+}
+// 我的资产
+.icon-wodezichan:before {
+  content: "\e61e";
+}
+// 意见反馈
+.icon-yijianfankui:before {
+  content: "\e620";
+}
+.icon-clear:before {
+  content: "\e622";
+}
+.icon-shop:before {
+  content: "\e624";
+}
+.icon-cart:before {
+  content: "\e636";
+}
+.icon-service:before {
+  content: "\e643";
+}
+.icon-setting:before {
+  content: "\e64c";
+}
+// 电话
+.icon-dianhua:before {
+  content: "\e659";
+}
+// 回到顶部
+.icon-backtop:before {
+  content: "\e689";
+}
+.icon-home:before {
+  content: "\e699";
+}
+// X
+.icon-delete:before {
+  content: "\e6ac";
+}
+// 售后服务
+.icon-shouhoufuwu:before {
+  content: "\e6d6";
+}
+// 资产
+.icon-zichan:before {
+  content: "\e75b";
+}
+.icon-collect:before {
+  content: "\e78c";
+}
+.icon-msg:before {
+  content: "\e7a8";
+}
+.icon-category:before {
+  content: "\e7f9";
+}
+.icon-more:before {
+  content: "\e85c";
+}
