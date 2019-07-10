@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+aside,
+section,
+footer,
+header,
+nav,
+figure,
+figcaption,
+article {
+  display: block;
+}
+input {
+  outline: 0;
+  border: 0;
+}
+html,
+body {
+  min-width: 1200px;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei', 'Times New Roman', Times, serif;
+}
+/* header 头部区域 */
+header {
+  background-color: #EFEFEF;
+  height: 100px;
+  border-bottom: solid 1px blue;
+}
+header .wrap {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+header .wrap .logo {
+  height: 100%;
+  float: left;
+}
+header .wrap .logo > a > img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+}
+header .wrap .logo > h1 {
+  display: inline-block;
+  font-size: 20px;
+  color: #333333;
+  height: 100px;
+  line-height: 100px;
+  margin-left: 90px;
+}
+header .wrap .logo .line-v {
+  font-weight: bold;
+  font-size: 18px;
+}
+header .wrap .logo > span {
+  color: #666666;
+}
+header .wrap .contour {
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  top: 35px;
+}
+header .wrap .contour > a {
+  color: orange;
+}
+header .wrap .contour .dropdown {
+  float: right;
+  position: relative;
+  z-index: 5;
+}
+header .wrap .contour .dropdown .dropdown-toggle {
+  display: block;
+  width: 140px;
+  text-align: center;
+}
+header .wrap .contour .dropdown .dropdown-toggle .caret {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: black transparent transparent;
+}
+header .wrap .contour .dropdown:hover .dropdown-menu {
+  display: block;
+  animation: slide-down 0.5s ease-in-out forwards;
+}
+@keyframes slide-down {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    height: 330px;
+    overflow: hidden;
+  }
+}
+@-webkit-keyframes slide-down {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    height: 330px;
+    overflow: hidden;
+  }
+}
+header .wrap .contour .dropdown .dropdown-menu {
+  position: absolute;
+  display: none;
+  background-color: white;
+  outline: solid 1px orange;
+  top: 30px;
+  width: 100%;
+}
+header .wrap .contour .dropdown .dropdown-menu > a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  padding: 0 12px;
+}
+header .wrap .contour .dropdown .dropdown-menu > a:hover {
+  background-color: #efefef;
+}
+header .wrap .contour .dropdown .dropdown-menu > a > li {
+  color: #666666;
+}
+header .wrap .contour .dropdown .dropdown-menu > a .line {
+  border-bottom: dotted 1px #666;
+}
+header .wrap .contour .iphone {
+  float: right;
+  height: 30px;
+  color: #000;
+}
+header .wrap .contour .iphone > img {
+  height: 100%;
+}
+header .wrap .contour .iphone > span {
+  position: relative;
+  top: -10px;
+}
+/* 注册区域 */
+.register {
+  width: 1200px;
+  margin: auto;
+  padding-bottom: 60px;
+  padding-top: 6px;
+}
+.register .path {
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+}
+.register .path > span {
+  color: #777;
+  font-weight: normal;
+}
+.register .form {
+  border: solid 1px orange;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.register .form .title {
+  height: 40px;
+  line-height: 40px;
+  background-color: orange;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #fff;
+  text-indent: 5px;
+  font-weight: bold;
+}
+.register .form .information {
+  padding-top: 40px;
+}
+.register .form .information .item {
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+.register .form .information .item > label {
+  margin-left: 300px;
+}
+.register .form .information .item > input {
+  border: solid 1px gray;
+  width: 250px;
+  height: 26px;
+  line-height: 26px;
+}
+.register .form .information .item > select {
+  width: 250px;
+  height: 30px;
+  line-height: 30px;
+}
+.register .form .information .item .name-explain {
+  color: orange;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+.register .form .information .item .name-explain:hover + .txt {
+  display: block;
+}
+.register .form .information .item .txt {
+  display: none;
+  padding: 0 8px;
+  outline: solid 1px cyan;
+  font-size: 12px;
+  color: #666;
+  width: 440px;
+  position: absolute;
+  left: 720px;
+  top: 27px;
+}
+.register .form .information .item .txt > p {
+  line-height: 28px;
+}
+.register .form .information .item .pwd-three,
+.register .form .information .item .pwd-two,
+.register .form .information .item .pwd-one {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  left: 634px;
+}
+.register .form .information .item .pwd-three > span,
+.register .form .information .item .pwd-two > span,
+.register .form .information .item .pwd-one > span {
+  display: block;
+  width: 48px;
+  height: 10px;
+  background-color: orange;
+  float: left;
+  margin-right: 8px;
+}
+.register .form .information .item .pwd-three > div,
+.register .form .information .item .pwd-two > div,
+.register .form .information .item .pwd-one > div {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  height: 12px;
+  line-height: 12px;
+  color: blue;
+  margin-left: 9px;
+  margin-top: 12px;
+  font-weight: bold;
+}
+.register .form .information .item .pwd-two > span {
+  background-color: green;
+}
+.register .form .information .item .pwd-two > div {
+  margin-left: 36px;
+}
+.register .form .information .item .pwd-three > span {
+  background-color: green;
+}
+.register .form .information .item .pwd-three > div {
+  margin-left: 68px;
+}
+.register .form .agreement {
+  height: 30px;
+  line-height: 30px;
+}
+.register .form .agreement > label {
+  margin-left: 375px;
+}
+.register .form .agreement > a {
+  color: rgba(17, 117, 117, 0.547);
+}
+.register .form button[type="submit"] {
+  width: 120px;
+  height: 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #ffa500;
+  border-width: 0;
+  outline: 0;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px 0 30px 380px;
+}
+.register .form button[type="submit"]:hover {
+  background-color: #00a500;
+}
+.register .form button[type="submit"]:active {
+  box-shadow: 0 0 2px 1px rgba(109, 243, 109, 0.7) inset;
+}
+/* 页脚 区域  */
+footer {
+  border-top: solid 1px blue;
+  background-color: #DCDCDC;
+  color: #666;
+}
+footer > nav {
+  text-align: center;
+}
+footer > nav > a {
+  color: #666;
+}
+footer .filing {
+  text-align: center;
+}
