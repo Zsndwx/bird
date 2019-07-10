@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #myCanvas{
+            background-color: white;
+            width: 950px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="950" height="400"></canvas>
+    <script src="js/canvas.js"></script>
+    <script>
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        new canvasLock(ctx).init();
+    </script>
+</body>
+
+</html>
