@@ -1,0 +1,87 @@
+*{margin:0;padding:0}
+a{text-decoration:none}
+li,ol,ul{list-style:none}
+article,aside,figcaption,figure,footer,header,nav,section{display:block}
+input{outline:0;border:0}
+body,html{min-width:1206px;font-size:14px;font-family:'微软雅黑','Times New Roman',Times,serif}
+header{height:60px;background-color:#000}
+header>a{display:block;float:left;margin-left:27px}
+header>a>img{width:122px;height:36px;position:relative;top:12px}
+header>nav{margin-left:29px;float:left;height:60px}
+header>nav>a{display:block;float:left;height:60px;line-height:60px;padding:0 25px;color:#fff}
+header>nav>a:hover{background-color:#363c41}
+header>nav .nav-item-new{background-color:#363c41}
+header>nav .nav-item-new::after{content:' ';display:block;float:right;width:16px;height:16px;background-image:url(../img/icon-new.png);position:relative;top:11px}
+header .search{width:264px;height:38px;float:right;margin-right:13px;position:relative;top:11px}
+header .search:hover::before{display:none}
+header .search::before{content:'前端入门';display:inline-block;width:72px;height:30px;line-height:30px;text-align:center;position:absolute;top:1px;left:0;background-color:#2b333b;color:#5c646b;z-index:1}
+header .search>input{width:100%;height:38px;line-height:38px;background-color:#000;color:#fff;position:relative;border-bottom:solid 1px #999}
+header .search .submit{display:inline-block;width:22px;height:22px;padding-right:24px;position:absolute;top:50%;margin-top:-11px;right:0;background-color:#000;background-image:url(../img/icon-1-sprite_w22.png);background-repeat:no-repeat;cursor:pointer;z-index:1}
+header .profile{width:222px;height:60px;float:right}
+header .profile-ava,header .profile-bag,header .profile-message{display:block;width:74px;height:100%;float:left;position:relative}
+header .profile-ava::before,header .profile-bag::before,header .profile-message::before{content:' ';display:block;width:22px;height:22px;top:19px;position:relative;left:26px;background-repeat:no-repeat}
+header .profile-bag::before{background-image:url(../img/shopcar.png);background-position:2px -213px}
+header .profile-message::before{background-image:url(../img/icon-1-sprite_w22.png);background-position:0 -66px}
+header .profile-ava:hover,header .profile-bag:hover,header .profile-message:hover{background-color:#363c41}
+header .profile-ava::before{width:36px;height:36px;top:12px;position:relative;left:19px;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;background-image:url(../img/ava.jpg);background-size:100% 100%;background-repeat:no-repeat}
+.banner{background-image:url(../img/cart-header-bg.jpg);height:160px}
+.banner .title{width:1104px;margin:auto;height:29px;line-height:29px;padding-top:43px;font-size:30px}
+.settlement{background-color:#fff;border-bottom:solid 1px #e1e1e1;width:100%;height:596px;position:relative}
+.settlement .shopCar{background-color:rgba(255,255,255,.5);border:solid 1px #dcdcdc;box-shadow:0 0 8px 0 #dcdcdc;width:1104px;position:absolute;left:50%;margin-left:-552px;top:-61px;font-size:0}
+.settlement .shopCar .title{height:60px;line-height:60px;color:#6c6c6c;font-size:16px}
+.settlement .shopCar .title>label{margin-left:20px;position:absolute}
+.settlement .shopCar .title .commodityName{margin-left:94px;margin-right:320px}
+.settlement .shopCar .title .priceSize{margin-right:100px}
+.settlement .shopCar .title .price{margin-right:102px}
+.settlement .shopCar .title .num{margin-right:208px}
+.settlement .shopCar .con-row{border-top:solid 1px #dbdbdb;height:120px;position:relative;color:#6c6c6c;font-size:14px}
+.settlement .shopCar .con-row .all-select{margin-left:20px;width:13px;height:13px;position:absolute;top:50%;margin-top:-6.5px}
+.settlement .shopCar .con-row .pic{margin-left:63px;width:160px;height:90px;position:absolute;top:50%;margin-top:-45px}
+.settlement .shopCar .con-row .img-title{display:block;height:18px;line-height:18px;white-space:nowrap;position:absolute;top:23px;margin-left:232px;font-size:18px}
+.settlement .shopCar .con-row .txt-price{height:14px;line-height:14px;position:absolute;top:35px}
+.settlement .shopCar .con-row .txt-price>i{font-style:normal}
+.settlement .shopCar .con-row .priceSize{margin-left:473px}
+.settlement .shopCar .con-row .price{margin-left:613px}
+.settlement .shopCar .con-row .number{display:inline-block;width:96px;height:24px;font-size:0;position:absolute;top:31px;margin-left:731px}
+.settlement .shopCar .con-row .number>button{width:16px;height:16px;font-size:8px;cursor:pointer;position:absolute;top:50%;margin-top:-7px;text-align:center;vertical-align:middle;user-select:none}
+.settlement .shopCar .con-row .number>input{width:58px;height:22px;border:solid 1px #dbdbdb;font-size:12px;margin-right:4px;margin-left:18px;text-indent:4px}
+.settlement .shopCar .con-row .txt-del{display:inline-block;position:absolute;user-select:none;cursor:pointer;top:35px;margin-left:1003px}
+.settlement .shopCar .con-row .txt-del:active{box-shadow:0 0 5px 0 #dcdcdc}
+.settlement .settlement-go{width:1104px;position:absolute;left:50%;margin-left:-552px;bottom:39px;border:solid 1px #dcdcdc}
+.settlement .settlement-go .price{float:right;height:50px;line-height:50px;margin-right:5px}
+.settlement .settlement-go .price>span:first-child{font-size:12px;color:#6c6c6c}
+.settlement .settlement-go .price>i{font-style:normal;color:#f01605}
+.settlement .settlement-go .price .num{color:#f01605}
+.settlement .settlement-go .submit{float:right;width:120px;height:50px;background-color:#f01605;color:#fff;font-size:18px;cursor:pointer}
+.settlement .settlement-go .submit:active{box-shadow:0 0 5px 1px #dcdcdc inset}
+footer{height:96px;background-color:#000}
+footer .wrap{width:1206px;margin:auto;position:relative}
+footer .wrap>nav{height:12px;line-height:12px;margin-left:50px;padding-top:32px}
+footer .wrap>nav>a{display:block;float:left;font-size:12px;color:#959aa0;margin-right:30px}
+footer .wrap>nav>a:hover{color:#fff}
+footer .wrap .footer-copy{font-size:12px;color:#5c646b;margin-left:50px;margin-top:15px}
+footer .wrap .footer-shape{position:absolute;width:120px;height:32px;right:36px;top:30px}
+footer .wrap .footer-shape>a{display:block;width:32px;height:32px;margin-right:12px;float:left;background-image:url(../img/footer-sprite.png);background-color:#000}
+footer .wrap .footer-shape>a:last-of-type{margin-right:0}
+footer .wrap .footer-shape>a:hover{-moz-opacity:.5;-khtml-opacity:.5;opacity:.5}
+footer .wrap .footer-shape .shape-item-1{background-position:0 -279px}
+footer .wrap .footer-shape .shape-item-2{background-position:0 -321px}
+footer .wrap .footer-shape .shape-item-3{background-position:0 -363px}
+footer .wrap .footer-shape .shape-item-1:hover~.popover-img{display:block;-webkit-animation:_show .5s ease-in-out forwards;-moz-animation:_show .5s ease-in-out forwards;-o-animation:_show .5s ease-in-out forwards;animation:_show .5s ease-in-out forwards}
+@keyframes _show{
+form{-moz-opacity:0;-khtml-opacity:0;opacity:0}
+to{-moz-opacity:1;-khtml-opacity:1;opacity:1}
+}
+@-webkit-keyframes _show{
+form{-moz-opacity:0;-khtml-opacity:0;opacity:0}
+to{-moz-opacity:1;-khtml-opacity:1;opacity:1}
+}
+@-moz-keyframes _show{
+form{-moz-opacity:0;-khtml-opacity:0;opacity:0}
+to{-moz-opacity:1;-khtml-opacity:1;opacity:1}
+}
+@-o-keyframes _show{
+form{-moz-opacity:0;-khtml-opacity:0;opacity:0}
+to{-moz-opacity:1;-khtml-opacity:1;opacity:1}
+}
+footer .wrap .footer-shape .popover-img{position:absolute;width:170px;height:213px;top:-223px;left:-69px;background-image:url(../img/footer-sprite.png);display:none;-moz-opacity:0;-khtml-opacity:0;opacity:0}
