@@ -1,0 +1,633 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+aside,
+section,
+footer,
+header,
+nav,
+figure,
+figcaption,
+article {
+    display: block;
+}
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+input {
+    outline: 0;
+    border: 0;
+}
+html,
+body{
+    min-width: 1200px;
+    font-size: 14px;
+    font-family: '微软雅黑','Times New Roman', Times, serif;
+}
+
+.fl() {
+    float: left;
+}
+
+.fr() {
+    float: right;
+}
+
+#ft-size(@name) {
+    & when(@name=small) {
+        font-size: 12px;
+    }
+
+    & when(@name=medile) {
+        font-size: 16px;
+    }
+
+    & when(@name=large) {
+        font-size: 14px;
+    }
+
+    & when(@name=title) {
+        font-size: 32px;
+    }
+    & when(@name=sub) {
+        font-size: 20px;
+    }
+}
+
+#lin-h(@h: 0px) {
+    height: @h;
+    line-height: @h;
+}
+
+.clearfix() {
+    &::after {
+        content: ' ';
+        display: block;
+        #lin-h();
+        clear: both;
+        zoom: 1;
+    }
+}
+
+#square(@x: 0px) {
+    width: @x;
+    height: @x;
+}
+
+#radius(@deg: 50%) {
+    -webkit-border-radius: @deg;
+    -moz-border-radius: @deg;
+    border-radius: @deg;
+}
+
+.border-bottom() {
+    &::before {
+        content: ' ';
+        display: block;
+        width: 98%;
+        position: absolute;
+        left: 1%;
+        bottom: -5px;
+        height: 3px;
+        background-color: #fff;
+        #radius(4px);
+        box-shadow: 0 8px 16px rgba(7, 17, 27, .2);
+    }
+
+    &::after {
+        content: ' ';
+        display: block;
+        width: 96%;
+        position: absolute;
+        left: 2%;
+        bottom: -11px;
+        height: 3px;
+        background-color: #fff;
+        #radius(4px);
+        box-shadow: 0 8px 16px rgba(7, 17, 27, .2);
+    }
+
+    position: relative;
+}
+
+#bg-cor(@name: #fff) {
+    background-color: @name;
+}
+
+// 相对定位 垂直居中
+#v-re-center(@h, @h-size) {
+    position: relative;
+    top: (@h-size - @h) / 2;
+}
+// 绝对定位 垂直居中
+#v-ab-center(@h){
+    position: absolute;
+    top: 50%;
+    margin-top: @h / 2 * -1;
+}
+// 绝对定位 水平居中
+#s-ab-center(@w){
+    position: absolute;
+    left: 50%;
+    margin-left: @w / 2 * -1;
+}
+#bg-img(@url){
+    background-image: url("../img/@{url}");
+}
+.bg(){
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.bg-o(){
+    -webkit-background-origin: border-box;
+    -moz-background-origin: border-box;
+    background-origin: border-box;
+}
+
+@color_header_placeholder_bg: #2b333b;
+@color_header_line: #606468;
+@color_header_placeholder_font: #5c646b;
+@color_header: black;
+@color_header_hover: #363c41;
+@color_header_font: #fbfbfb;
+@color-header-message: #C9394A;
+
+@color_banner_title:#ffcc33;
+
+@color_recommend_bg: white;
+@color_recommend_font: #959aa0;
+@color_recommend_line: #d9dde1;
+
+@color_courses_bg:#f3f5f7;
+@color_courses_nav_font:#14191e;
+@color_courses_nav_hover_bg:#4d555d;
+@color_courses_nav_hover_font:#fff;
+@color_courses_list_title:#1f2831;
+@color_courses_list_category:#93999f;
+@color_courses_list_time:#949aa0;
+
+@color_footer_bg:#000;
+@color_footer_font_friendlink:#c8cdd2;
+@color_footer_font_text:#787d82;
+
+// 测试用,过后删除
+.b(@name: red) {
+    outline: solid 1px @name;
+}
+
+/* header 头部 */
+header {
+    height: 60px;
+    #bg-cor(@color_header);
+    position: relative;
+    font-size: 0;
+    >a {
+        display: block;
+        .fl();
+        height: 36px;
+        width: 128px;
+        margin: 12px 36px;
+        >img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    >nav {
+        display: block;
+        height: 60px;
+        #lin-h(60px);
+        .fl();
+        margin: 0 20px;
+        >a {
+            display: inline-block;
+            height: 60px;
+            padding: 0 25px;
+            color: @color_header_font;
+            #ft-size(large);
+            &:hover {
+                #bg-cor(@color_header_hover);
+            }
+        }
+        .nav_icon_new{
+            #bg-cor(@color_header_hover);
+            &::after{
+                content: ' ';
+                display: block;
+                .fr();
+                position: relative;
+                top: 12px;
+                #square(16px);
+                #bg-img("icon-new.png");
+                background:no-repeat cover;
+            }
+        }
+    }
+    .search{
+        .fr();
+        height: 60px;
+        width: 242px;
+        position: relative;
+        margin-right: 20px;
+
+        &::before{
+            content: '前端入门';
+            display: block;
+            width: 72px;
+            #lin-h(30px);
+            #v-ab-center(30px);
+            .fl();
+            #bg-cor(@color_header_placeholder_bg);
+            color: @color_header_placeholder_font;
+            #ft-size(small);
+            text-align: center;
+            z-index: 2;
+        }
+        >input{
+            width: 242px;
+            #lin-h(38px);
+            #v-ab-center(38px);
+            #bg-cor(@color_header);
+            color: #Fff;
+            border-bottom: solid 1px @color_header_line;
+        }
+        .submit{
+            display: block;
+            #square(22px);
+            #v-ab-center(22px);
+            right: 0;
+            #bg-img("icon-1-sprite_w22.png");
+            z-index: 2;
+        }
+    }
+    .prolife{
+        .fr();
+        height: 60px;
+        >a{
+            position: relative;
+            display: block;
+            .fl();
+            #square(60px);
+            cursor: pointer;
+        }
+        &__iphone::after,&__message::after,
+        &__mail::after{
+            content: ' ';
+            display: block;
+            #square(22px);
+            margin: auto;
+            #v-re-center(22px, 60px);
+            #bg-img("icon-1-sprite_w22.png");
+            background-repeat: no-repeat;
+        }
+        &__iphone{
+            &::after{
+                background-position: 0px -22px;
+            }
+        }
+        &__message{
+            &::before{
+                content: '50';
+                display: block;
+                padding: 1px 4px 3px;
+                font-size: 12px;
+                #radius(4px);
+                #bg-cor(@color-header-message);
+                color: @color_header_font;
+                position: relative;
+                .fr();
+                top: 10px;
+                right: 5px;
+                z-index: 3;
+            }
+            &::after{
+                background-position: 0px -44px;
+            }
+        }
+        &__mail{
+            &::after{
+                background-position: 0px -66px;
+            }
+        }
+        .prolife-ava{
+            #square(36px);
+            margin: 12px;
+            #radius();
+            #bg-cor(@color_header_hover);
+        }
+    }
+}
+
+/* banner 区域 */
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 560px;
+    #bg-img("banner.jpg");
+    .bg();
+    .caption{
+        padding-top: 50px;
+        color: @color_header_font;
+        text-align: center;
+        #ft-size(title);
+        &__text{
+            display: inline-block;
+        }
+        >img{
+            vertical-align: middle;
+        }
+    }
+    .tips{
+        width: 602px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 178px - 75px - 81px;
+
+        .tips-item{
+            width: 90px;
+            padding-top: 66px;
+            height: 66px + 41px + 14px;
+            #bg-img("propaganda-h64.png");
+            background-repeat: no-repeat;
+            .bg-o();
+            text-align: center;
+            .tips-title{
+                #ft-size(sub);
+                color: @color_banner_title;
+                #lin-h(20px);
+                margin: 14px 0 7px 0;
+            }
+            .tips-text{
+                #ft-size(large);
+                #lin-h(14px);
+                color: @color_header_font;
+            }
+        }
+        .tips-item_1{
+            background-position: 90px - 73px 0;
+        }
+        .tips-item_2{
+            background-position: center top;
+        }
+        .tips-item_3{
+            background-position: -146px 0;
+        }
+    }
+}
+
+/* recommend 区域 */
+.recommend {
+    #bg-cor(@color_recommend_bg);
+    height: 200px;
+    position: relative;
+
+    .recommend-course{
+        width: 285px;
+        height: 342px;
+        .border-bottom();
+        margin-top: -210px;
+        #s-ab-center(285px);
+        #bg-cor(@color_recommend_bg);
+        box-shadow: 0 8px 16px rgba(7, 17, 27, 0.2);
+        #bg-img("course-b-bg.png");
+        &:hover .recommend-course__plan{
+            top: 165px;
+        }
+        &__cover{
+            height: 110px + 30px + 32px;
+            overflow: hidden;
+            >img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__plan{
+            #bg-img("course-b-bg.png");
+            position: absolute;
+            width: 100%;
+            top: 135px;
+            padding: 30px 35px 20px 35px;
+            >h3{
+                #ft-size(medile);
+                #lin-h(24px);
+            }
+            .times{
+                #ft-size(small);
+                #lin-h(22px);
+                color: @color_recommend_font;
+                margin-bottom: 8px;
+                >span{
+                    margin-left: 10px;
+                }
+            }
+            .desc{
+                #ft-size(small);
+                #lin-h(24px);
+                color: @color_recommend_font;
+                padding-top: 8px;
+                border-top: solid 1px @color_recommend_line;
+            }
+        }
+        &__price{
+            padding: 20px 35px;
+            margin-bottom: 20px;
+            #lin-h(30px);
+            #ft-size(small);
+            position: absolute;
+            bottom: 0;
+            color: #C9394A;
+            >i{
+                font-style: normal;
+                vertical-align: super;
+                padding: 0 3px;
+            }
+        }
+    }
+}
+
+/* courses 区域 */
+.courses {
+    height: 686px;
+    #bg-cor(@color_courses_bg);
+    overflow: hidden;
+    >nav{
+        text-align: center;
+        padding-top: 30px;
+        font-size: 0;
+        padding-bottom: 32px;
+        >a{
+            display: inline-block;
+            color: @color_courses_nav_font;
+            #ft-size(large);
+            padding: 0px 12px;
+            #lin-h(32px);
+            margin-right: 12px;
+        }
+        >a:hover,
+        .nav-header{
+            #bg-cor(@color_courses_nav_hover_bg);
+            color: @color_courses_nav_hover_font;
+        }
+    }
+    &__list{
+        width: 1200px;
+        margin: auto;
+        .clearfix();
+        &__item:hover .course-plan{
+            top: 110px;
+        }
+        &__item{
+            width: 224px;
+            height: 206px;
+            .border-bottom();
+            .fl();
+            #bg-img("course-s-bg.png");
+            #bg-cor();
+            margin-right: 20px;
+            margin-bottom: 24px + 11px;
+            box-shadow: 0 4px 8px rgba(7, 17, 27, 0.1);
+            &:nth-child(5n){
+                margin-right: 0;
+            }
+            .course-cover{
+                height: 90px;
+                >img{
+                    width: 100%;
+                }
+            }
+            .course-plan{
+                #bg-img("course-s-bg.png");
+                .bg();
+                .fl();
+                position: absolute;
+                top: 90px;
+                width: 224px;
+                padding:0 20px;
+                >h3{
+                    color: @color_courses_list_title;
+                    #ft-size(small);
+                    #lin-h(18px);
+                    margin-top: 16px;
+                }
+                .category{
+                    color: @color_courses_list_category;
+                    #ft-size(small);
+                    #lin-h(34px);
+                }
+                .times{
+                    color: @color_courses_list_time;
+                    #ft-size(small);
+                    #lin-h(34px);
+                    position: relative;
+                    >span{
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .pagination{
+        @color_pagination_font_disabled:#d6dade;
+        @color_pagination_font_num_hover_cor:#fefefe;
+        @color_pagination_font_num_hover_bg:#4d555d;
+        @color_pagination_font:#4d555d;
+
+        margin-top: 6px;
+        text-align: center;
+        font-size: 0;
+        >a{
+            display: inline-block;
+            #ft-size(large);
+            #lin-h(32px);
+            cursor: pointer;
+        }
+        &__number,
+        &__page{
+            margin-right: 12px;
+            color: @color_pagination_font;
+        }
+        &__page:last-of-type{
+            margin-right: 0;
+        }
+        &__status_disabled{
+            color: @color_pagination_font_disabled;
+        }
+        &__number{
+            #square(32px);
+            #radius();
+        }
+        &__number:hover,
+        &__status_current{
+            #bg-cor(@color_pagination_font_num_hover_bg);
+            color: @color_pagination_font_num_hover_cor;
+        }
+    }
+}
+
+/* footer 页脚 */
+footer {
+    height: 98px;
+    #bg-cor(@color_footer_bg);
+    .wrap > nav{
+        padding-left: 39px;
+        padding-top: 30px;
+        >a{
+            display: block;
+            .fl();
+            margin-right: 30px;
+            #ft-size(small);
+            color: @color_footer_font_friendlink;
+        }
+    }
+    .copy{
+        padding-left: 39px;
+        padding-top: 30px;
+        #ft-size(small);
+        color: @color_footer_font_text;
+    }
+    .share{
+        position: absolute;
+        right: 38px;
+        top: 28px;
+        &__item{
+            display: block;
+            .fl();
+            margin-left: 12px;
+            #square(33px);
+            #radius();
+            #bg-img("icon-6-sprit_w32.png");
+            background-repeat: no-repeat;
+        }
+        &__item_1{
+            background-position: 0 0;
+        }
+        &__item_2{
+            background-position: 0 -32px;
+        }
+        &__item_3{
+            background-position: 0 -64px;
+        }
+
+    }
+}

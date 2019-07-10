@@ -1,0 +1,564 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+aside,
+section,
+footer,
+header,
+nav,
+figure,
+figcaption,
+article {
+  display: block;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+input {
+  outline: 0;
+  border: 0;
+}
+html,
+body {
+  min-width: 1200px;
+  font-size: 14px;
+  font-family: '微软雅黑', 'Times New Roman', Times, serif;
+}
+/* header 头部 */
+header {
+  height: 60px;
+  background-color: black;
+  position: relative;
+  font-size: 0;
+}
+header > a {
+  display: block;
+  float: left;
+  height: 36px;
+  width: 128px;
+  margin: 12px 36px;
+}
+header > a > img {
+  width: 100%;
+  height: 100%;
+}
+header > nav {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  float: left;
+  margin: 0 20px;
+}
+header > nav > a {
+  display: inline-block;
+  height: 60px;
+  padding: 0 25px;
+  color: #fbfbfb;
+  font-size: 14px;
+}
+header > nav > a:hover {
+  background-color: #363c41;
+}
+header > nav .nav_icon_new {
+  background-color: #363c41;
+}
+header > nav .nav_icon_new::after {
+  content: ' ';
+  display: block;
+  float: right;
+  position: relative;
+  top: 12px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/icon-new.png");
+  background: no-repeat cover;
+}
+header .search {
+  float: right;
+  height: 60px;
+  width: 242px;
+  position: relative;
+  margin-right: 20px;
+}
+header .search::before {
+  content: '前端入门';
+  display: block;
+  width: 72px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  float: left;
+  background-color: #2b333b;
+  color: #5c646b;
+  font-size: 12px;
+  text-align: center;
+  z-index: 2;
+}
+header .search > input {
+  width: 242px;
+  height: 38px;
+  line-height: 38px;
+  position: absolute;
+  top: 50%;
+  margin-top: -19px;
+  background-color: black;
+  color: #Fff;
+  border-bottom: solid 1px #606468;
+}
+header .search .submit {
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+  right: 0;
+  background-image: url("../img/icon-1-sprite_w22.png");
+  z-index: 2;
+}
+header .prolife {
+  float: right;
+  height: 60px;
+}
+header .prolife > a {
+  position: relative;
+  display: block;
+  float: left;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+header .prolife__iphone::after,
+header .prolife__message::after,
+header .prolife__mail::after {
+  content: ' ';
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  position: relative;
+  top: 19px;
+  background-image: url("../img/icon-1-sprite_w22.png");
+  background-repeat: no-repeat;
+}
+header .prolife__iphone::after {
+  background-position: 0px -22px;
+}
+header .prolife__message::before {
+  content: '50';
+  display: block;
+  padding: 1px 4px 3px;
+  font-size: 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #C9394A;
+  color: #fbfbfb;
+  position: relative;
+  float: right;
+  top: 10px;
+  right: 5px;
+  z-index: 3;
+}
+header .prolife__message::after {
+  background-position: 0px -44px;
+}
+header .prolife__mail::after {
+  background-position: 0px -66px;
+}
+header .prolife .prolife-ava {
+  width: 36px;
+  height: 36px;
+  margin: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #363c41;
+}
+/* banner 区域 */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 560px;
+  background-image: url("../img/banner.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.banner .caption {
+  padding-top: 50px;
+  color: #fbfbfb;
+  text-align: center;
+  font-size: 32px;
+}
+.banner .caption__text {
+  display: inline-block;
+}
+.banner .caption > img {
+  vertical-align: middle;
+}
+.banner .tips {
+  width: 602px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+.banner .tips .tips-item {
+  width: 90px;
+  padding-top: 66px;
+  height: 121px;
+  background-image: url("../img/propaganda-h64.png");
+  background-repeat: no-repeat;
+  -webkit-background-origin: border-box;
+  -moz-background-origin: border-box;
+  background-origin: border-box;
+  text-align: center;
+}
+.banner .tips .tips-item .tips-title {
+  font-size: 20px;
+  color: #ffcc33;
+  height: 20px;
+  line-height: 20px;
+  margin: 14px 0 7px 0;
+}
+.banner .tips .tips-item .tips-text {
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #fbfbfb;
+}
+.banner .tips .tips-item_1 {
+  background-position: 17px 0;
+}
+.banner .tips .tips-item_2 {
+  background-position: center top;
+}
+.banner .tips .tips-item_3 {
+  background-position: -146px 0;
+}
+/* recommend 区域 */
+.recommend {
+  background-color: white;
+  height: 200px;
+  position: relative;
+}
+.recommend .recommend-course {
+  width: 285px;
+  height: 342px;
+  position: relative;
+  margin-top: -210px;
+  position: absolute;
+  left: 50%;
+  margin-left: -142.5px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(7, 17, 27, 0.2);
+  background-image: url("../img/course-b-bg.png");
+}
+.recommend .recommend-course::before {
+  content: ' ';
+  display: block;
+  width: 98%;
+  position: absolute;
+  left: 1%;
+  bottom: -5px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(7, 17, 27, 0.2);
+}
+.recommend .recommend-course::after {
+  content: ' ';
+  display: block;
+  width: 96%;
+  position: absolute;
+  left: 2%;
+  bottom: -11px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(7, 17, 27, 0.2);
+}
+.recommend .recommend-course:hover .recommend-course__plan {
+  top: 165px;
+}
+.recommend .recommend-course__cover {
+  height: 172px;
+  overflow: hidden;
+}
+.recommend .recommend-course__cover > img {
+  width: 100%;
+  height: 100%;
+}
+.recommend .recommend-course__plan {
+  background-image: url("../img/course-b-bg.png");
+  position: absolute;
+  width: 100%;
+  top: 135px;
+  padding: 30px 35px 20px 35px;
+}
+.recommend .recommend-course__plan > h3 {
+  font-size: 16px;
+  height: 24px;
+  line-height: 24px;
+}
+.recommend .recommend-course__plan .times {
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+  color: #959aa0;
+  margin-bottom: 8px;
+}
+.recommend .recommend-course__plan .times > span {
+  margin-left: 10px;
+}
+.recommend .recommend-course__plan .desc {
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  color: #959aa0;
+  padding-top: 8px;
+  border-top: solid 1px #d9dde1;
+}
+.recommend .recommend-course__price {
+  padding: 20px 35px;
+  margin-bottom: 20px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  color: #C9394A;
+}
+.recommend .recommend-course__price > i {
+  font-style: normal;
+  vertical-align: super;
+  padding: 0 3px;
+}
+/* courses 区域 */
+.courses {
+  height: 686px;
+  background-color: #f3f5f7;
+  overflow: hidden;
+}
+.courses > nav {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 0;
+  padding-bottom: 32px;
+}
+.courses > nav > a {
+  display: inline-block;
+  color: #14191e;
+  font-size: 14px;
+  padding: 0px 12px;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 12px;
+}
+.courses > nav > a:hover,
+.courses > nav .nav-header {
+  background-color: #4d555d;
+  color: #fff;
+}
+.courses__list {
+  width: 1200px;
+  margin: auto;
+}
+.courses__list::after {
+  content: ' ';
+  display: block;
+  height: 0px;
+  line-height: 0px;
+  clear: both;
+  zoom: 1;
+}
+.courses__list__item:hover .course-plan {
+  top: 110px;
+}
+.courses__list__item {
+  width: 224px;
+  height: 206px;
+  position: relative;
+  float: left;
+  background-image: url("../img/course-s-bg.png");
+  background-color: #fff;
+  margin-right: 20px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 8px rgba(7, 17, 27, 0.1);
+}
+.courses__list__item::before {
+  content: ' ';
+  display: block;
+  width: 98%;
+  position: absolute;
+  left: 1%;
+  bottom: -5px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(7, 17, 27, 0.2);
+}
+.courses__list__item::after {
+  content: ' ';
+  display: block;
+  width: 96%;
+  position: absolute;
+  left: 2%;
+  bottom: -11px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(7, 17, 27, 0.2);
+}
+.courses__list__item:nth-child(5n) {
+  margin-right: 0;
+}
+.courses__list__item .course-cover {
+  height: 90px;
+}
+.courses__list__item .course-cover > img {
+  width: 100%;
+}
+.courses__list__item .course-plan {
+  background-image: url("../img/course-s-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  float: left;
+  position: absolute;
+  top: 90px;
+  width: 224px;
+  padding: 0 20px;
+}
+.courses__list__item .course-plan > h3 {
+  color: #1f2831;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 16px;
+}
+.courses__list__item .course-plan .category {
+  color: #93999f;
+  font-size: 12px;
+  height: 34px;
+  line-height: 34px;
+}
+.courses__list__item .course-plan .times {
+  color: #949aa0;
+  font-size: 12px;
+  height: 34px;
+  line-height: 34px;
+  position: relative;
+}
+.courses__list__item .course-plan .times > span {
+  position: absolute;
+  right: 0;
+}
+.courses .pagination {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 0;
+}
+.courses .pagination > a {
+  display: inline-block;
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  cursor: pointer;
+}
+.courses .pagination__number,
+.courses .pagination__page {
+  margin-right: 12px;
+  color: #4d555d;
+}
+.courses .pagination__page:last-of-type {
+  margin-right: 0;
+}
+.courses .pagination__status_disabled {
+  color: #d6dade;
+}
+.courses .pagination__number {
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.courses .pagination__number:hover,
+.courses .pagination__status_current {
+  background-color: #4d555d;
+  color: #fefefe;
+}
+/* footer 页脚 */
+footer {
+  height: 98px;
+  background-color: #000;
+}
+footer .wrap > nav {
+  padding-left: 39px;
+  padding-top: 30px;
+}
+footer .wrap > nav > a {
+  display: block;
+  float: left;
+  margin-right: 30px;
+  font-size: 12px;
+  color: #c8cdd2;
+}
+footer .copy {
+  padding-left: 39px;
+  padding-top: 30px;
+  font-size: 12px;
+  color: #787d82;
+}
+footer .share {
+  position: absolute;
+  right: 38px;
+  top: 28px;
+}
+footer .share__item {
+  display: block;
+  float: left;
+  margin-left: 12px;
+  width: 33px;
+  height: 33px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-image: url("../img/icon-6-sprit_w32.png");
+  background-repeat: no-repeat;
+}
+footer .share__item_1 {
+  background-position: 0 0;
+}
+footer .share__item_2 {
+  background-position: 0 -32px;
+}
+footer .share__item_3 {
+  background-position: 0 -64px;
+}
