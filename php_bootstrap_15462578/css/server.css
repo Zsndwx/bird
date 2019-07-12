@@ -1,0 +1,126 @@
+
+/* banner */
+@media screen and (max-width:500px){
+    .banner img{
+        height: 100px;
+        width: auto;
+        max-width: 1920px;
+        float: left;
+        position: relative;
+        left: -140px;
+    }
+}
+
+/* 导航条 */
+.page-nav{
+    height: 58px;
+    background: #f0fcff;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+}
+.page-nav ul{
+    list-style: none;
+    height: 58px;
+    display: flex;
+    justify-content: space-around;
+}
+.page-nav ul > a{
+    color: #666;
+    text-decoration: none;
+}
+.page-nav ul > a>li{
+    display: flex;
+    padding: 0 6px;
+    height: 100%;
+}
+.page-nav ul > a>li span{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.page-nav ul > a>li.item_focus > span{
+    border-bottom: solid 1px red;
+    color: red;
+}
+
+/* 栅格系统 */
+#fcg,#fdz,#fnb,#nft {
+    background: #f7f7f7;
+    width: 100%;
+    min-height: 370px;
+    display: flex;
+}
+.container{
+    margin: auto;
+}
+
+.row-server .img-left{
+    float: right;
+}
+
+.row-server .server-info{
+    margin-top: 50px;
+}
+.row-server .server-info h3{
+    font-size: 30px;
+    color: #f00;
+}
+.row-server .server-info p{
+    font-size: 18px;
+    color: #888;
+}
+
+@media screen and (max-width:768px){
+    #fcg,#fdz,#fnb,#nft {
+        min-height: 150px;
+    }
+    .row-server{
+        display: flex;
+    }
+    .row-server .img-left{
+        float: none;
+        text-align: center;
+        width: 100px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .row-server .img-left img{
+        width: 100%;
+    }
+    .row-server .server-info{
+        margin-top: 0px;
+    }
+    .row-server .server-info h3{
+        font-size: 24px;
+    }
+    .row-server .server-info p{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:400px){
+    .row-server .img-left{
+        width: 80px;
+    }
+    .row-server .server-info h3{
+        font-size: 18px;
+    }
+    .row-server .server-info p{
+        font-size: 12px;
+    }
+}
+
+
+/* 内联表单 */
+#ilf,#fan,#ngp,#snt {
+    background: #fff;
+    width: 100%;
+    min-height: 370px;
+    display: flex;
+}
+
+@media screen and (max-width:768px){
+    #ilf,#fan,#ngp,#snt {
+        min-height: 150px;
+    }
+}

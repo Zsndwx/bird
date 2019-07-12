@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHP中文网</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body class="body-server">
+    <div id="top"></div>
+    <!-- 返回顶部 -->
+    <a href="#top" class="back-up-btn btn btn-default btn-lg" aria-label="返回顶部">
+        <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+    </a>
+    <!-- 页头 -->
+    <header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- 头部 -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-nav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="logo"><img src="img/logo.png"></a>
+                </div>
+                <!-- 下拉项 -->
+                <div class="collapse navbar-collapse" id="header-nav">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="server.html">产品</a></li>
+                        <li class="active"><a href="about.html">我们</a></li>
+                    </ul>
+                    <div class="nav-tell">4008-888888</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- banner图片 -->
+    <section class="banner clearfix">
+        <img src="img/about_02.png">
+    </section>
+    <!-- 导航条 -->
+    <section class="page-nav hidden-xs">
+        <div class="container">
+            <ul>
+                <a href="#women">
+                    <li class="item_focus"><span>关于我们</span></li>
+                </a>
+                <a href="#ilf">
+                    <li><span>联系我们</span></li>
+                </a>
+            </ul>
+        </div>
+    </section>
+    <!-- 关于我们 -->
+    <section id="women">
+        <div class="container">
+            <h3>公司介绍</h3>
+            <p>慕课网是国内规模最大 、互动性最高的IT技能学习平台，以培养企业实用型人才为己任，打造从人才培养到技术输出全产业链的跨终端IT学习应用平台</p>
+            <p>该平台几乎覆盖了前端/PHP/Android/iOS/Python/Java等主流技术方向。慕课网选取企业真实案例，还原开发真实场景，精心创作700余门免费课程及若干门实战课程（内容自制+PGC）；与BAT专业技术团队深度合作，与顶级互联网行业大会零距离接轨，以新潮学习体验颠覆传统教育模式，打造IT在线教育明星品牌。
+            </p>
+            <p><img src="img/about_05.jpg" alt=""></p>
+        </div>
+    </section>
+    <!-- 联系我们 -->
+    <section id="touch" class="hidden-xs">
+        <div class="container clearfix">
+            <h3>联系我们</h3>
+            <div class="box-on">
+                <div class="row con-li">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="con-img">
+                            <img src="img/about_09.jpg" alt="">
+                        </div>
+                        <div class="con-info">
+                            4008-888888
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="con-img">
+                            <img src="img/about_11.jpg" alt="">
+                        </div>
+                        <div class="con-pic">
+                            <img src="img/about_18.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="con-img">
+                            <img src="img/about_13.jpg" alt="">
+                        </div>
+                        <div class="con-info">
+                            北京市西城区德外大街10号
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6"><img src="img/index_48.png" class="img-left"></div>
+                <div class="col-xs-6 col-sm-6"><img src="img/index_46.png" class="img-right"></div>
+            </div>
+            <div class="copy-info">
+                <span>电话:4008-000000&nbsp;</span><span>固话:022-6666666&nbsp;</span>
+                <span>邮箱:kf@imooc.com&nbsp;</span><span>传真:022-6666666</span><br>
+                地址：北京市西城区德外大街10号<br><br>
+                Copyright © 2017 imooc.com All Rights Reserved | 京ICP备 13046642号-2
+            </div>
+        </div>
+    </footer>
+    <!-- js加载 -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            var parentNode = $('.page-nav .item_focus').closest('a');
+            var navList = parentNode.siblings().add(parentNode);
+            navList.on('click', function () {
+                navList.children('.item_focus').removeClass('item_focus');
+                $(this).children('li').addClass('item_focus');
+            });
+        });
+    </script>
+</body>
+
+</html>

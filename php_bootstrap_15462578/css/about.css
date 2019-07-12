@@ -1,0 +1,112 @@
+/* banner */
+@media screen and (max-width:500px) {
+    .banner{
+        position: relative;
+    }
+    .banner img {
+        height: 100px;
+        width: auto;
+        max-width: 1920px;
+        float: left;
+        position: relative;
+        left: -140px;
+    }
+}
+
+/* 导航条 */
+.page-nav {
+    height: 58px;
+    background: #f0fcff;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+}
+
+.page-nav ul {
+    list-style: none;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-nav ul>a {
+    color: #666;
+    text-decoration: none;
+}
+
+.page-nav ul>a>li {
+    display: flex;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.page-nav ul>a>li span {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.page-nav ul>a>li.item_focus>span {
+    border-bottom: solid 1px red;
+    color: red;
+}
+
+/* 公司介绍 */
+#women{
+    background: white;
+}
+#touch h3,
+#women h3 {
+    font-size: 20px;
+    
+    color: #f00;
+    font-weight: normal;
+}
+
+#women p {
+    margin: 25px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+#women p>img {
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    #women h3 {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    #women p {
+        font-size: 14px;
+    }
+}
+
+/* 联系我们 */
+#touch h3{
+    margin: 20px 0 30px 0;
+    float: left;
+    width: 100%;
+}
+#touch .box-on{
+    margin-top: 70px;
+    margin-bottom: 40px;
+    float: left;
+    width: 100%;
+}
+#touch .box-on .con-li{
+    text-align: center;
+}
+#touch .box-on .con-li .con-img>img{
+    vertical-align: middle;
+}
+#touch .box-on .con-li .con-info{
+    color: #f00;
+    margin-top: 70px;
+}
+#touch .box-on .con-li .con-pic{
+    margin-top: 20px;
+}
+
+
+

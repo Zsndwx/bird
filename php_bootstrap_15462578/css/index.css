@@ -1,0 +1,283 @@
+
+
+/* 图片区banner */
+.banner {
+    margin-top: 100px;
+}
+
+.banner>img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .banner {
+        margin-top: 80px;
+    }
+}
+
+
+/* 使用Bootstrap框架开发网站 区域 */
+.title-page {
+    text-align: center;
+    margin-top: 78px;
+}
+
+.page-two h3,
+.page-one h3 {
+    font-size: 30px;
+    color: #666;
+}
+
+.page-two p,
+.page-one p {
+    color: #999;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.page-two .page-pic,
+.page-one .page-pic {
+    margin-top: 122px;
+    text-align: center;
+    margin-bottom: 106px;
+}
+
+@media screen and (max-width:768px) {
+    .page-one .page-pic img {
+        width: 100%;
+    }
+
+    .title-page {
+        margin-top: 26px;
+    }
+
+    .page-one h3 {
+        font-size: 20px;
+    }
+
+    .page-one p {
+        font-size: 14px;
+        margin-top: 18px;
+    }
+
+    .page-two .page-pic,
+    .page-one .page-pic {
+        margin-top: 40px;
+        margin-bottom: 35px;
+    }
+}
+
+/* Bootstrap相关优质项目推荐 区域 */
+.page-two {
+    background: #eff4f7;
+    border-top: 1px solid #eeeff0;
+}
+
+.page-two .page-pic {
+    margin-top: 30px;
+}
+
+.page-two .page-pic a:hover {
+    text-decoration: none;
+}
+
+.page-two .thumbnail {
+    width: 100%;
+    height: 350px;
+    background: white url(../img/index_25.png) no-repeat center 20%;
+}
+
+.page-two .thumbnail:hover {
+    background: red url(../img/index_h_03.png) no-repeat center 20%;
+    border: 0;
+    box-shadow: 0 0 5px 2px #666;
+}
+
+.page-two .col-xs-6:nth-child(2) .thumbnail {
+
+    background-image: url(../img/index_27.png);
+}
+
+.page-two .col-xs-6:nth-child(2) .thumbnail:hover {
+    background-image: url(../img/index_h_05.png);
+}
+
+.page-two .col-xs-6:nth-child(3) .thumbnail {
+
+    background-image: url(../img/index_29.png);
+}
+
+.page-two .col-xs-6:nth-child(3) .thumbnail:hover {
+    background-image: url(../img/index_h_07.png);
+}
+
+.page-two .col-xs-6:nth-child(4) .thumbnail {
+
+    background-image: url(../img/index_31.png);
+}
+
+.page-two .col-xs-6:nth-child(4) .thumbnail:hover {
+    background-image: url(../img/index_h_09.png);
+}
+
+.page-two .thumbnail .caption h3 {
+    color: #888;
+    font-size: 24px;
+    margin-top: 190px;
+}
+
+.page-two .thumbnail:hover h3 {
+    color: #fff;
+}
+
+.page-two .thumbnail .btn-default {
+    background: white;
+    color: #ff0000;
+    border-color: red;
+    padding: 6px 18px;
+    margin-top: 20px;
+}
+
+.page-two .thumbnail:hover .btn-default {
+    color: white;
+    background: red;
+    border-color: white;
+}
+
+@media screen and (max-width:768px) {
+    .page-two .title-page h3 {
+        font-size: 18px;
+    }
+
+    .page-two .title-page p {
+        font-size: 14px;
+    }
+
+    .page-two .thumbnail {
+        height: 200px;
+        background-size: auto 80px;
+        background-position: center 10%;
+    }
+
+    .page-two .thumbnail:hover {
+        background-size: auto 80px;
+        background-position: center 10%;
+        border: 0;
+        box-shadow: 0 0 5px 2px #666;
+    }
+
+    .page-two p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .page-two .thumbnail .caption h3 {
+        font-size: 18px;
+        margin-top: 95px;
+    }
+
+    .page-two .thumbnail:hover h3 {
+        color: #fff;
+    }
+
+    .page-two .thumbnail .btn-default {
+        padding: 4px 10px;
+    }
+}
+
+
+
+
+/* Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架 */
+.page-three {
+    background: white;
+}
+
+.page-three .title-page h3 {
+    margin-bottom: 20px;
+}
+
+.page-three .title-page p {
+    margin: 0;
+}
+
+.page-three img {
+    width: 100%;
+    max-width: 811px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width:768px) {
+    .page-three .title-page h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #666;
+    }
+
+    .page-three .title-page p {
+        margin: 0;
+        font-size: 12px;
+        color: #888;
+    }
+}
+
+
+/* Bootstrap 让前端开发更快速、简单 */
+.page-four {
+    background: #eff4f7;
+    border-top: 1px solid #eeeff0;
+}
+
+.page-four .page-group {
+    margin-bottom: 60px;
+}
+
+.page-four .title-page h3 {
+    margin-bottom: 90px;
+    color: #666;
+}
+
+.page-four .page-group img {
+    width: 100%;
+    max-width: 544px;
+    margin-top: 30px;
+}
+
+.page-four .page-group .in-info {
+    list-style: none;
+}
+
+.page-four .page-group .in-info li {
+    line-height: 48px;
+}
+
+.page-four .page-group .in-info li:hover {
+    color: red;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .page-four .page-group {
+        margin-bottom: 20px;
+    }
+
+    .page-four .title-page h3 {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .page-four .page-group img {
+        margin-top: 10px;
+    }
+
+    .page-four .page-group .in-info {
+        list-style: none;
+    }
+
+    .page-four .page-group .in-info li {
+        line-height: 30px;
+        font-size: 14px;
+    }
+}
