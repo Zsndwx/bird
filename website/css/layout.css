@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.wrap{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header{
+    height: 52px;
+}
+header > .wrap{
+    height: 52px;
+    background-color: #2E2E2E;
+}
+.banner{
+    height: 354px;
+    /* background-color: pink; */
+}
+.portfolio{
+    height: 512px;
+}
+.stats{
+    height: 304px;
+    /* background-color: purple; */
+}
+.team{
+    height: 350px;
+}
+.team > .wrap{
+    height: 350px;
+    background-color: #2E2E2E;
+}
+.contact-us{
+    height: 444px;
+}
+footer{
+    height: 60px;
+    background-color: #000;
+}
