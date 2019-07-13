@@ -220,6 +220,7 @@ header .wrap > nav > a:hover{
     margin-left: -52.5px;
     font-size: 12px;
     cursor: pointer;
+    bottom: -35px;
 }
 
 /* footer区 */
