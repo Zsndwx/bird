@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 5rem;
+    background: #B2C5CC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .nav{
+    display: none;
+}
+
+header>nav {
+    display: flex;
+    width: 60vw;
+    margin: .1rem 0;
+}
+
+header>nav>a {
+    flex: 1;
+    color: #757575;
+    text-align: center;
+    font-size: .06rem;
+}
+
+header>nav>.link_focus {
+    color: #afafaf;
+}
+
+header .icon {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .icon>img {
+    width: 1rem;
+    height: 1rem;
+    margin-bottom: .25rem;
+}
+
+header .icon>span {
+    color: #fff;
+    font-size: .2rem;
+}
+
+header>input {
+    width: 1.4rem;
+    height: .4rem;
+    background: rgb(255, 255, 255);
+    outline: 0;
+    border: 0;
+    font-size: .07rem;
+}
+
+header>input:active {
+    box-shadow: 0 0 2px 0 #efefef;
+}
+
+/* 第二区域 标题区 */
+.title {
+    display: flex;
+    background: white;
+    border-bottom: solid 1px #ccc;
+}
+
+.title>a {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    color: #bababa;
+    padding: .25rem 0;
+    font-size: .08rem;
+}
+
+.title>.active {
+    color: #545454;
+}
+
+
+/* 第三区域 标题内容区 */
+.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.items .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: red; */
+}
+
+.items .item .caption {
+    font-size: .3rem;
+    margin: 1rem 0 .2rem 0;
+}
+
+.items .item .text {
+    width: 50vw;
+    text-align: justify;
+    margin-bottom: .68rem;
+    font-size: .07rem;
+}
+
+/* 第四区域 */
+.four {
+    background: #F4F4F4;
+    padding: .25rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.four>div {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.four>div>span {
+    color: #696964;
+    font-size: .1rem;
+}
+
+.four>div>span>a {
+    color: #000;
+}
+
+/* 第五区域 主打课程 */
+.course {
+    display: flex;
+    /* flex-direction: column; */
+    background: url(../img/bg.jpg) no-repeat center;
+    background-size: cover;
+    justify-content: center;
+}
+
+.course>div {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course>div>span {
+    padding: .4rem 0px 0rem;
+    color: #555;
+}
+
+.course>div>.course-items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: .2rem 0;
+}
+
+.course>div>.course-items>a {
+    display: flex;
+    width: 30vw;
+    height: 1.8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.course>div>.course-items>a>img {
+    width: 90%;
+    height: 90%;
+}
+
+/* 页脚 */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .07rem;
+    padding: .2rem 0;
+    background: #F1F1F1;
+}
+
+/* iphone6 */
+@media screen and (min-width:370px) and (max-width:740px) {
+    /* header 头部 */
+    header > nav{
+        display: none;
+    }
+    header .nav{
+        display: flex;
+        flex-direction: column;
+        background: #7EA6B1;
+    }
+    header .nav .menu{
+        display: flex;
+        width: 100vw;
+        height: .45rem;
+        position: relative;
+        align-items: center;
+        flex-direction: column;
+    }
+    header .nav .menu > span{
+        display: flex;
+        flex: 1;
+        color: white;
+        font-size: .2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    header .nav .menu > a{
+        color: white;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.1rem;
+        right: .2rem;
+        cursor: pointer;
+        font-size: .25rem;
+    }
+    header .nav .menu .menu-items{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: .45rem;
+        background: #7EA6B1;
+    }
+    header .nav .menu .menu-items a{
+        display: flex;
+        padding: .07rem 0;
+        justify-content: center;
+        width: 100vw;
+        display: flex;
+        border-bottom: solid 1px #efefef;
+        color: white;
+    }
+    header .nav .menu .menu-items a:last-child{
+        border: 0;
+    }
+    /* 第五区域 主打课程 */
+    .course>div>.course-items>a {
+        display: flex;
+        width: 45vw;
+        height: 1.8rem;
+    }
+}

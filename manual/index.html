@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>响应式布局</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <!-- ipad导航 -->
+        <nav>
+            <a class="link_focus" href="#">前端</a>
+            <a href="#">java</a>
+            <a href="#">ios</a>
+            <a href="#">Android</a>
+            <a href="#">php</a>
+        </nav>
+        <!-- iphone6 导航 -->
+        <div class="nav">
+            <div class="menu">
+                <span>mcake</span>
+                <a class="fa fa-square-o fa-lg"></a>
+                <div class="menu-items" style="display:none;">
+                    <a href="#">前端</a>
+                    <a href="#">java</a>
+                    <a href="#">ios</a>
+                    <a href="#">Android</a>
+                    <a href="#">php</a>
+                </div>
+            </div>
+        </div>
+        <!-- logo -->
+        <div class="icon">
+            <img src="img/1.png" alt="">
+            <span>MCAKE</span>
+        </div>
+        <!-- 按钮 -->
+        <input type="submit" value="start">
+    </header>
+    <!-- 标题区 -->
+    <section class="title">
+        <a class="active" href="#">关于MCAKE</a>
+        <a href="#">关于课程</a>
+        <a href="#">核心团队</a>
+        <a href="#">新增专题</a>
+    </section>
+    <!-- 第三区域 标题内容区 -->
+    <section class="items">
+        <div class="item">
+            <p class="caption">响应式</p>
+            <p class="text">
+                页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行相应的响应和调整。具体的实践方式由多方面组成，包括弹性网格和布局、图片、CSS media
+                query的使用等。无论用户正在使用笔记本还是iPad，我们的页面都应该能够自动切换分辨率、图片尺寸及相关脚本功能等，以适应不同设备；换句话说，页面应该有能力去自动响应用户的设备环境。响应式网页设计就是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本。这样，我们就可以不必为不断到来的新设备做专门的版本设计和开发了。
+            </p>
+        </div>
+        <div class="item" style="display:none;">关于课程item</div>
+        <div class="item" style="display:none;">核心团队item</div>
+        <div class="item" style="display:none;">新增专题item</div>
+    </section>
+    <!-- 第四区域  -->
+    <section class="four">
+        <div>
+            <span>MCAKE</span>
+            <span>welcome to <a href="http://www.mcake.com/shop/110/index.html">www.mcake.com</a></span>
+        </div>
+    </section>
+    <!-- 第五区域 主打课程 -->
+    <section class="course">
+        <div>
+            <span>主打课程</span>
+            <div class="course-items">
+                <a href="#"><img src="img/1.jpg" alt=""></a>
+                <a href="#"><img src="img/2.jpg" alt=""></a>
+                <a href="#"><img src="img/3.jpg" alt=""></a>
+                <a href="#"><img src="img/4.jpg" alt=""></a>
+                <a href="#"><img src="img/5.jpg" alt=""></a>
+                <a href="#"><img src="img/6.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <!-- 页脚 -->
+    <footer>
+        Copyright &copy; 2017 mcake.com All Right Reserved
+    </footer>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
