@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>城市预约挂号平台</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/scheduling.css">
+    <script src="js/data.js"></script>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="top" id="top">
+        <div class="wrap">
+            <p class="call">010-114/116114电话预约</p>
+            <p class="text">欢迎来到城市预约挂号统一平台
+                &nbsp;请&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">登录</a>&nbsp;&nbsp;
+                <a href="#">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">帮助中心</a>
+            </p>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <div class="header" id="header">
+        <div class="wrap clearfix">
+            <!-- logo -->
+            <a href="hospital_detail.html"><img src="images/logo.png" class="logo"></a>
+            <!-- 搜索框 -->
+            <div class="search ui-search">
+                <div class="ui-search-selected">医院</div>
+                <div class="ui-search-select-list">
+                    <a href="#1">科室</a>
+                    <a href="#1">疾病</a>
+                    <a href="#1">医院</a>
+                </div>
+                <input type="text" name="ui-content" placeholder="请输入搜索内容" class="ui-search-input">
+                <a href="javascript:void(0)" class="ui-search-submit"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 导航条 -->
+    <div class="nav" id="nav">
+        <div class="wrap">
+            <a href="../index.html" class="link left-link">首页</a>
+            <a href="../hospital.html" class="link">按医院挂号</a>
+            <a href="./hospital_detail.html" class="link">按科室挂号</a>
+            <a href="../department/index.html" class="link">按疾病挂号</a>
+            <a href="#" class="link">最新公告</a>
+            <a href="#" class="link right-link">社会知名医院</a>
+        </div>
+    </div>
+    <!-- 医院介绍 -->
+    <div class="introduction" id="introduction">
+        <div class="wrap">
+            <!-- 标题行 -->
+            <div class="caption">
+                <p class="name">北京协和医院&nbsp;&nbsp;<a href="#" class="follow">关注医院</a></p>
+                <p class="text">
+                    <span class="tit level">等级:</span><span class="con">三级甲等</span>&nbsp;&nbsp;
+                    <span class="tit area">区域:</span><span class="con">东城区</span>&nbsp;&nbsp;
+                    <span class="tit type">分类:</span><span class="con">中国医科院所属医院</span>
+                </p>
+            </div>
+            <!-- 内容行 -->
+            <div class="hospitalList">
+                <a href=""><img src="images/hospital-1.jpg" alt="" class="hospital-pic"></a>
+                <div class="detail">
+                    <p class="address">[东院]北京市东城区帅府园一号[西院]北京市西城区大木仓胡同41号</p>
+                    <p class="url">http://www.pumch.cn/</p>
+                    <p class="call">东院咨询台: 010-6915564;西院咨询台: 010-69158010</p>
+                    <p class="search">东院:106,108,110,156,568,154,654到东单路口北:41,104快,814到东单路口南;
+                        1,52,728,802到东单路口西；20,25,37,39,到东单路口东;<br />
+                        103,104,420,803到新东安市场；地铁1、5号线到东单。西院：68到屁猜胡同洞口；更多乘车路肩详见须知
+                    </p>
+                </div>
+                <a href=""><img src="images/map-1.png" class="map"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 科室排班表 -->
+    <div class="department-scheduling" id="department-scheduling">
+        <div class="wrap">
+            <!-- 标题行 -->
+            <p class="text">科室排班表&nbsp;&nbsp; <a href="hospital_detail.html" class="link">返回科室列表</a> </p>
+            <!-- 内容行 -->
+            <div class="list clearfix ui-list-table">
+                <!-- first 列 -->
+                <div class="column">
+                    <img src="images/icon-scheduling-left.jpg" class="icon prev">
+                    <div class="cell">上午</div>
+                    <div class="cell">下午</div>
+                    <div class="cell">晚上</div>
+                </div>
+                <!-- tow 列 -->
+                <div class="con">
+                    <div class="table-scheduling ui-table-scheduling">
+                        <!-- Table表-科室排班表 -->
+                        <table class="scheduling">
+                            <thead class="thead">
+                                <tr class="row"></tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr class="row"></tr>
+                                <tr class="row row-color"></tr>
+                                <tr class="row"></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- three 列 -->
+                <div class="column">
+                    <img src="images/icon-scheduling-right.jpg" class="icon next">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <!-- 预约规则 -->
+                <div class="rule">
+                    <p class="tit">预约规则</p>
+                    <p class="label">预约周期:</p>
+                    <p class="contxt">7天</p>
+                    <p class="label">放号时间:</p>
+                    <p class="contxt">8:30</p>
+                    <p class="label">停挂时间:</p>
+                    <p class="contxt">下午14:00停止次日预约挂号(周五14:00后停挂至下周一)</p>
+                    <p class="label">退号时间:</p>
+                    <p class="contxt">就诊前一工作日14:00前取消</p>
+                    <p class="label">特殊规则:</p>
+                    <p class="contxt"><br />
+                        1、申请人可按时间段预约次日起5日内的窗口登记业务，预约成功并按本规则在规定时间内前往窗口办理登记业务的，窗口优先办理。<br />
+                        2、申请人在每一个预约时间段前5分钟开始凭身份证件及预约成功证明到窗口取号处领取现场办理顺序号，多人到场的，按预约成功证明的先后序号领取现场办理顺序号；预约时间段截止时间前20分钟，停止该时间段预约优先取号，未按时取号的按普通号取号。<br />
+                        3、预约取号及现场取号应基于真实的办理业务需求，确实需要更改或取消预约取号的，须在预约目标日期前一天的18：00前更改或取消。未按规定更改、取消，或者存在倒卖、串用、虚拟占用号码资源等嫌疑的，将限制业务并可追究相关责任。
+                    </p>
+                </div>
+            </div>
+            <div class="placeholder">您还没有选择就诊日期</div>
+        </div>
+    </div>
+
+    <div class="footer" id="footer">
+        CopyRight &copy; 2016 XX医院版权所有
+    </div>
+    <script src="js/ui.js"></script>
+</body>
+
+</html>

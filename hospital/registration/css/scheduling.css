@@ -1,0 +1,115 @@
+
+/* 科室排班表 样式设置 */
+.department-scheduling{
+    margin-bottom: 110px;
+}
+.department-scheduling .text{
+    font-size: 16px;
+    display: block;
+    text-indent: 10px;
+    height: 40px;
+}
+.department-scheduling .text .link{
+    line-height: 40px;
+    color: #00B3EC;
+    font-size: 15px;
+}
+.department-scheduling .list .column{
+    width: 34px;
+    height: 323px;
+    float: left;
+    background-color: #F2F8FF;
+    border: solid 1px #DCDDDD;
+}
+.department-scheduling .list .column .icon{
+    display: block;
+    width: 36px;
+    height: 46px;
+    cursor: pointer;
+}
+.department-scheduling .list .column .cell{
+    width: 36px;
+    height: 93px;
+    line-height: 93px;
+    text-align: center;
+}
+.department-scheduling .list .con{
+    width: 658px;
+    height: 325px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.department-scheduling .list .con .table-scheduling{
+    width: 9999px;
+    height: 325px;
+    position: absolute;
+}
+.department-scheduling .list .con .table-scheduling .scheduling{
+    text-align: center;
+    border-collapse: collapse;
+}
+.department-scheduling .list .con .table-scheduling .scheduling .thead .row{
+    height: 46px;
+}
+.department-scheduling .list .con .table-scheduling .scheduling .tbody .row{
+    height: 93px;
+}
+.department-scheduling .list .con .table-scheduling .scheduling .tbody .row-color{
+    background-color: #E0EEFD;
+    color: #4AB4ED;
+}
+.department-scheduling .list .con .table-scheduling .scheduling .row .cell{
+    width: 94px;
+    border: solid 1px #DCDDDD;
+    box-sizing: border-box;
+}
+
+.department-scheduling .list .rule{
+    width: 270px;
+    height: 325px;
+    float: right;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.department-scheduling .list .rule .tit{
+    font-size: 16px;
+    line-height: 60px;
+    height: 60px;
+    width: 100%;
+}
+.department-scheduling .list .rule .label{
+    color: #555555;
+    line-height: 20px;
+    width: 100%;
+}
+.department-scheduling .list .rule .contxt{
+    color: #888888;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.department-scheduling .placeholder{
+    height: 65px;
+    border: solid 1px #DCDDDD;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 65px;
+    position: relative;
+    color: #9F9F9F;
+}
+.department-scheduling .placeholder::before{
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background: url(../images/icon-info.jpg) no-repeat center;
+    top: 50%;
+    margin-top: -10px;
+    left: 50%;
+    margin-left: -100px;
+}
+

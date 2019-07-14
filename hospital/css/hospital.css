@@ -1,0 +1,187 @@
+.nav .link{
+    padding: 0 10px;
+}
+.nav .link:first-of-type{
+    margin-left: 50px;
+}
+.nav .nav_focus{
+    background-color: #1fa4f0;
+}
+/* 条件筛选 模块样式 */
+.filter{
+    margin: 42px 0;
+}
+.filter .wrap{
+    background-color: #FBFBFB;
+}
+.filter .group{
+    /* margin-top: 50px; */
+    height: 80px;
+    line-height: 120px;
+    font-size: 16px;
+    padding-left: 30px;
+    color: #4C4948;
+}
+.filter .group:last-of-type{
+    padding-bottom: 34px;
+}
+.filter .group .caption{
+    display: inline-block;
+    color: #4C4948;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 10px;
+    margin: 0 25px;
+    cursor: pointer;
+}
+.filter .group .caption_focus{
+    background-color: #60BFF2;
+    color: #fff;
+}
+.filter .group >span{
+    color: #DCDDDD;
+}
+
+/* 分页内容展示 模块样式 */
+.datalist{
+    width: 1000px;
+    margin: 42px auto;
+    border: solid 1px #F4F6FA;
+}
+.datalist .group{
+    height: 358px;
+}
+.datalist .group:hover{
+    background-color: #F5FCFF;
+}
+.datalist .group .pic{
+    width: 362px;
+    height: 262px;
+    float: left;
+    margin-top: 48px;
+    margin-left: 30px;
+}
+.datalist .group .detail{
+    margin-top: 48px;
+    width: 580px;
+    height: 262px;
+    float: right;
+    /* border: solid 1px red; */
+    position: relative;
+}
+.datalist .group .detail .name{
+    font-size: 18px;
+    color: #000;
+    line-height: 60px;
+}
+.datalist .group .detail .name .level{
+    font-size: 16px;
+    color: #F7B52C;
+    display: inline-block;
+    margin-left: 20px;
+}
+.datalist .group .detail .address,
+.datalist .group .detail .call,
+.datalist .group .detail .time{
+    display: block;
+    color: #888888;
+    font-size: 16px;
+    padding-left:20px;
+    line-height: 17.5px;
+    background: url(../img/icon-tel.png) no-repeat 0 -35.5px;
+    margin-bottom: 20px;
+}
+.datalist .group .detail .call{
+    background-position-y: 0;
+}
+.datalist .group .detail .address{
+    background-position-y: -17.5px;
+}
+.datalist .group .detail .link{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -22.5px;
+    width: 110px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #F7B52C;
+    color: #fff;
+    font-size: 16px;
+    line-height: 45px;
+    padding-left: 10px;
+}
+.datalist .group .detail .link .circle{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: solid 1px #fff;
+    line-height: 16px;
+    text-align: center;
+    box-shadow: 0 0 0 1px #fff;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* pagination 分页栏 样式设置 */
+.pagination{
+    width: 1000px;
+    margin: 0 auto;
+    color: blue;
+    text-align: center;
+    height: 60px;
+    /* border: solid 1px red; */
+}
+.pagination .text{
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 20px;
+    line-height: 60px;
+    /* border: solid 1px pink; */
+}
+.pagination .pageNum,
+.pagination .nextBtn,
+.pagination .prevBtn{
+    display: inline-block;
+    font-size: 20px;
+    width: 28px;
+    height: 25px;
+    text-align: center;
+    border: solid 1px #DCDDDD;
+    border-radius: 5px;
+    margin-right: 20px;
+    background: url(../img/icon-pagination-arrow.png) no-repeat 8px -13px;
+    cursor: pointer;
+    color: rgba(250, 250, 250, .1);
+}
+.pagination .nextBtn{
+    background-position-y: 5px;
+}
+.pagination .pageNum{
+    color: blue;
+    background-image: none;
+}
+.pagination .pageNum_focus{
+    color: #fff;
+    background-color: #1EB3EC;
+}
+.pagination .text .number{
+    width: 50px;
+    border: solid 1px #DCDDDD;
+    border-radius: 5px;
+    text-indent: 8px;
+}
+
+.pagination .search-icon{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: url(../img/icon-pagination-go.png) no-repeat center;
+    cursor: pointer;
+    position: relative;
+    top: 6px;
+}
+
+
+

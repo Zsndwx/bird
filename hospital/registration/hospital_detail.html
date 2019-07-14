@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>城市预约挂号平台</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="top" id="top">
+        <div class="wrap">
+            <p class="call">010-114/116114电话预约</p>
+            <p class="text">欢迎来到城市预约挂号统一平台
+                &nbsp;请&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">登录</a>&nbsp;&nbsp;
+                <a href="#">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">帮助中心</a>
+            </p>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <div class="header" id="header">
+        <div class="wrap clearfix">
+            <!-- logo -->
+            <a href="hospital_detail.html"><img src="images/logo.png" class="logo"></a>
+            <!-- 搜索框 -->
+            <div class="search ui-search">
+                <div class="ui-search-selected">医院</div>
+                <div class="ui-search-select-list">
+                    <a href="#1">科室</a>
+                    <a href="#1">疾病</a>
+                    <a href="#1">医院</a>
+                </div>
+                <input type="text" name="ui-content" placeholder="请输入搜索内容" class="ui-search-input">
+                <a href="javascript:void(0)" class="ui-search-submit"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 导航条 -->
+    <div class="nav" id="nav">
+        <div class="wrap">
+            <a href="../index.html" class="link left-link">首页</a>
+            <a href="../hospital.html" class="link">按医院挂号</a>
+            <a href="./hospital_detail.html" class="link">按科室挂号</a>
+            <a href="../department//index.html" class="link">按疾病挂号</a>
+            <a href="#" class="link">最新公告</a>
+            <a href="#" class="link right-link">社会知名医院</a>
+        </div>
+    </div>
+    <!-- 医院介绍 -->
+    <div class="introduction" id="introduction">
+        <div class="wrap">
+            <!-- 标题行 -->
+            <div class="caption">
+                <p class="name">北京协和医院&nbsp;&nbsp;<a href="#" class="follow">关注医院</a></p>
+                <p class="text">
+                    <span class="tit level">等级:</span><span class="con">三级甲等</span>&nbsp;&nbsp;
+                    <span class="tit area">区域:</span><span class="con">东城区</span>&nbsp;&nbsp;
+                    <span class="tit type">分类:</span><span class="con">中国医科院所属医院</span>
+                </p>
+            </div>
+            <!-- 内容行 -->
+            <div class="hospitalList">
+                <a href=""><img src="images/hospital-1.jpg" alt="" class="hospital-pic"></a>
+                <div class="detail">
+                    <p class="address">[东院]北京市东城区帅府园一号[西院]北京市西城区大木仓胡同41号</p>
+                    <p class="url">http://www.pumch.cn/</p>
+                    <p class="call">东院咨询台: 010-6915564;西院咨询台: 010-69158010</p>
+                    <p class="search">东院:106,108,110,156,568,154,654到东单路口北:41,104快,814到东单路口南;
+                        1,52,728,802到东单路口西；20,25,37,39,到东单路口东;<br />
+                        103,104,420,803到新东安市场；地铁1、5号线到东单。西院：68到屁猜胡同洞口；更多乘车路肩详见须知
+                    </p>
+                </div>
+                <a href=""><img src="images/map-1.png" class="map"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 医院体系 -->
+    <div class="tab ui-tab" id="tab">
+        <div class="wrap">
+            <!-- 标题列表 -->
+            <div class="caption">
+                <a href="javascript:void(0)" class="item item_focus">预约挂号</a>
+                <a href="javascript:void(0)" class="item">医院介绍</a>
+                <a href="javascript:void(0)" class="item">预约须知</a>
+                <a href="javascript:void(0)" class="item">停诊信息</a>
+                <a href="javascript:void(0)" class="item">查询取消</a>
+            </div>
+            <!-- 标题对应的内容列表项 -->
+            <div class="content">
+                <!-- 预约挂号 -->
+                <div class="content-item clearfix item_focus">
+                    <!-- 开放预约科室 -->
+                    <div class="department">
+                        <p class="text"><span>开放预约科室</span></p>
+                        <div class="department-category clearfix">
+                            <div class="capltion">
+                                <p class="caption-item">2301</p>
+                                <p class="caption-item">专科</p>
+                                <p class="caption-item">内科</p>
+                                <p class="caption-item">内科</p>
+                            </div>
+                            <div class="list">
+                                <div class="caption-item-content-list">
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                </div>
+                                <div class="caption-item-content-list">
+                                    <a href="scheduling.html" class="department-name">多发性硬性专科</a>
+                                    <a href="scheduling.html" class="department-name">门诊麻醉科</a>
+                                    <a href="scheduling.html" class="department-name">门诊麻醉科</a>
+                                    <a href="scheduling.html" class="department-name">多发性硬性专科</a>
+                                    <a href="scheduling.html" class="department-name">多发性硬性专科</a>
+                                    <a href="scheduling.html" class="department-name">门诊麻醉科</a>
+                                    <a href="scheduling.html" class="department-name">门诊麻醉科</a>
+                                    <a href="scheduling.html" class="department-name">特殊门诊科</a>
+                                    <a href="scheduling.html" class="department-name">门诊麻醉科</a>
+                                    <a href="scheduling.html" class="department-name">门诊麻醉科</a>
+                                    <a href="scheduling.html" class="department-name">门诊麻醉科</a>
+                                    <a href="scheduling.html" class="department-name">多发性硬性专科</a>
+                                </div>
+                                <div class="caption-item-content-list">
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">多发性硬性专科</a>
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">门诊麻醉科</a>
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                </div>
+                                <div class="caption-item-content-list">
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">多发性硬性专科</a>
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">门诊麻醉科</a>
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">特需血液内科</a>
+                                    <a href="scheduling.html" class="department-name">脑瘤内科门诊</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 预约规则 -->
+                    <div class="rule">
+                        <p class="text">预约规则 <span class="placeholder">(更新时间每日8:30更新)</span></p>
+                        <div class="detail">
+                            <table>
+                                <tr class="row">
+                                    <td class="tit">预约周期:</td>
+                                    <td class="con">7天</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="tit">放号时间:</td>
+                                    <td class="con">8:30</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="tit">停挂时间:</td>
+                                    <td class="con">下午14:00停止次日预约挂号(周五14:00后停挂至下周一)</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="tit">退号时间:</td>
+                                    <td class="con">就诊前一工作日14:00前取消</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="tit">特殊规则:</td>
+                                    <td class="con"><br />
+                                        1、申请人可按时间段预约次日起5日内的窗口登记业务，预约成功并按本规则在规定时间内前往窗口办理登记业务的，窗口优先办理。<br />
+                                        2、申请人在每一个预约时间段前5分钟开始凭身份证件及预约成功证明到窗口取号处领取现场办理顺序号，多人到场的，按预约成功证明的先后序号领取现场办理顺序号；预约时间段截止时间前20分钟，停止该时间段预约优先取号，未按时取号的按普通号取号。<br />
+                                        3、预约取号及现场取号应基于真实的办理业务需求，确实需要更改或取消预约取号的，须在预约目标日期前一天的18：00前更改或取消。未按规定更改、取消，或者存在倒卖、串用、虚拟占用号码资源等嫌疑的，将限制业务并可追究相关责任。
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- 医院介绍 -->
+                <div class="content-item">
+                    <p class="text">
+                        北京大学第三医院（简称“北医三院”）始建于1958年，是国家卫生健康委委管的集医疗、教学、科研和预防保健为一体的现代化综合性三级甲等医院。现有在岗职工4861人，开放床位1755张。医院设有36个临床科室、10个医技科室。拥有27个博士点、1个临床博士后流动站。在岗博士生导师57人，中国科学院院士1人、中国工程院院士1人，国家自然科学基金杰出青年基金获得者3人、科技部“973”首席科学家1人、教育部“长江学者特聘教授”2人，1人入选国家级“新世纪百千万人才工程”，国家卫生计生委突出贡献专家10人。
+                    </p>
+                    <br />
+                    <p class="text">
+                        北医三院拥有国内最强的脊柱外科和目前世界规模最大、治疗方法最全面的生殖医学中心之一。中国大陆首例试管婴儿在此诞生。运动医学研究所是中国最早成立、国内唯一的中国奥委会指定运动员伤病防治中心。眼科在眼外伤及眼科疑难重症的诊治方面处于国内领先水平；消化科在溃疡病发病机制研究及治疗、早期胃癌的诊疗等领域居国内前列；心血管内科在冠心病介入治疗、急性心肌梗死“绿色通道”及临床与基础协调发展等方面居国内一流水平；成形科、职业病科是国内率先成立的临床特色学科。
+                    </p>
+                    <br />
+                    <p class="text">
+                        在几代人的共同努力下，北医三院已发展成为国内高水平的大型综合性医院。骨科、药剂科（临床药学）、病理科、专科护理、检验科、消化科、妇科、产科、职业病科、耳鼻喉科、心血管分子生物学与调节肽重点实验室、呼吸内科、神经内科、普通外科、泌尿外科、眼科、麻醉科、康复医学科、成形科（整形外科）、运动医学科等二十个学科为国家临床重点专科建设项目。妇产科为国家妇产疾病临床医学研究中心。产科、康复医学科为国家专业医疗质量管理与控制中心。
+                    </p>
+                    <br />
+                    <p class="text">
+                        十余年来，北医三院门、急诊量始终居北京市各大医院前列。2017年，年服务门急诊患者近399.11万人次，年服务出院患者10.31万余人次，年手术量6.15万余例次，在我院住院分娩新生儿总数为5272人，平均住院日为5.78天。在北京市DRGｓ（疾病诊断相关组）综合评价中，北医三院各项主要管理指标达先进水平。多次受到国家卫生计生委和北京市卫生计生委的表彰。在北医三院住院患者中，三分之一以上是来自全国各地的疑难杂症患者。
+                    </p>
+                    <br />
+                    <p class="text">
+                        拥有50多年历史的北医三院，积淀历久弥新的医院文化，充满朝气与活力。全体北医三院人将继续秉承“团结、奉献、求实、创新”的院训精神，以精湛的医术和高度的责任感承载生命的重托，为建设“国家级医疗中心、高水平的疑难重症诊治中心、临床医学研究中心和医学人才培养基地”而努力奋斗！
+                    </p>
+                    <br /><br />
+                    <br /><br />
+                </div>
+                <!-- 预约须知 -->
+                <div class="content-item">
+                    <p class="reservation-caption">北京协和医院预约挂号须知</p>
+                    <p class="bold">电话预约挂号：010-114（24小时）</p>
+                    <br />
+                    <p class="bold">网络预约挂号：http://www.biguahao.gov.cn</p>
+                    <p class="notice">为方便群众就医，我院已实行分时段预约挂号。患者可根据个人需要在预定的时间来院诊疗，有效缓解患者排队挂号及侯诊时间较长的问题。</p>
+                    <br />
+                    <p class="bold">为方便群众就医，我院已实行分时段预约挂号。</p>
+                    <p class="notice">1、预约挂号须办理“郴州市第一人民医院诊疗卡”。（电话预约可先以姓名和联系方式预约，就诊当天确认缴费时凭身份证办理诊疗卡）；</p>
+                    <p class="notice">2、自助机或人工窗口均提供办理诊疗卡服务，诊疗卡上留存的手机号码必须真实有效，否则，将影响接收预约成功及停诊短信。</p>
+                    <p class="notice">3、可提供本周内的挂号预约，并预约到医生个人及就诊时段。医生专长及介绍可在我院网站（网址：http://cz.czhospital.com/
+                        ）、“郴州市第一人民医院”微信公众号及门诊大厅查看、咨询。</p>
+                    <br />
+                    <p class="bold">如需咨询或预约，请拨打咨询预约电话：0735-2343666。</p>
+                    <p class="notice">1、预约挂号须办理“郴州市第一人民医院诊疗卡”。（电话预约可先以姓名和联系方式预约，就诊当天确认缴费时凭身份证办理诊疗卡）；</p>
+                    <p class="notice">2、自助机或人工窗口均提供办理诊疗卡服务，诊疗卡上留存的手机号码必须真实有效，否则，将影响接收预约成功及停诊短信。</p>
+                    <br />
+                    <p class="bold">为方便群众就医，我院已实行分时段预约挂号。</p>
+                    <p class="notice">1、预约挂号须办理“郴州市第一人民医院诊疗卡”。（电话预约可先以姓名和联系方式预约，就诊当天确认缴费时凭身份证办理诊疗卡）；</p>
+                    <p class="notice">2、自助机或人工窗口均提供办理诊疗卡服务，诊疗卡上留存的手机号码必须真实有效，否则，将影响接收预约成功及停诊短信。</p>
+                    <p class="notice">3、可提供本周内的挂号预约，并预约到医生个人及就诊时段。医生专长及介绍可在我院网站（网址：http://cz.czhospital.com/
+                        ）、“郴州市第一人民医院”微信公众号及门诊大厅查看、咨询。</p>
+                    <br />
+                    <p class="bold">如需咨询或预约，请拨打咨询预约电话：0735-2343666。</p>
+                    <p class="notice">1、预约挂号须办理“郴州市第一人民医院诊疗卡”。（电话预约可先以姓名和联系方式预约，就诊当天确认缴费时凭身份证办理诊疗卡）；</p>
+                    <p class="notice">2、自助机或人工窗口均提供办理诊疗卡服务，诊疗卡上留存的手机号码必须真实有效，否则，将影响接收预约成功及停诊短信。</p>
+                    <br />
+                </div>
+                <!-- 停诊信息 -->
+                <div class="content-item">
+                    <table class="stopDiagnosis-table">
+                        <caption class="table-caption">停诊信息</caption>
+                        <thead class="thead">
+                            <tr class="row">
+                                <th class="cell data">日期</th>
+                                <th class="cell week">星期</th>
+                                <th class="cell tiem">时段</th>
+                                <th class="cell departments">科室</th>
+                                <th class="cell speciality">特长</th>
+                                <th class="cell technical">职称</th>
+                                <th class="cell price">挂号费</th>
+                                <th class="cell canNum">可挂号数</th>
+                                <th class="cell noNum">剩余号数</th>
+                                <th class="cell way">替换方式</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="cell">2017-01-09</td>
+                                <td class="cell">1</td>
+                                <td class="cell">上午</td>
+                                <td class="cell">整形美容外科门诊(西院)</td>
+                                <td class="cell"></td>
+                                <td class="cell">副教授(特需200)</td>
+                                <td class="cell">200.00</td>
+                                <td class="cell">0</td>
+                                <td class="cell">0</td>
+                                <td class="cell">不可替换</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/><br/>
+                </div>
+                <!-- 查询取消 -->
+                <div class="content-item">
+                    <div class="form">
+                        <label for="code" class="label">预约识别码：</label>
+                        <input type="text" name="code" id="code" class="code">
+                        <input type="button" value="查询订单" class="submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="footer" id="footer">
+        CopyRight &copy; 2016 XX医院版权所有
+    </div>
+    <script src="js/ui.js"></script>
+</body>
+
+</html>

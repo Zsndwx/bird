@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>城市医院预约平台—按医院挂号</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/hospital.css">
+</head>
+
+<body>
+    <div id="top" class="top">
+        <div class="wrap">
+            <p class="cell">010-114/116114电话预约</p>
+            <p class="text">欢迎来到城市预约挂号统一平台&nbsp;请
+                &nbsp;&nbsp;
+                <a href="#">登录</a>
+                &nbsp;&nbsp;
+                <a href="#">注册</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#">帮助中心</a>
+            </p>
+        </div>
+    </div>
+    <div id="header" class="header">
+        <div class="wrap">
+            <a href="index.html" onclick="location.href='index.html'"><img class="logo" src="./img/logo.png"></a>
+            <div class="search ui-search">
+                <div class="ui-search-selected">医院</div>
+                <div class="ui-search-select-list">
+                    <a href="#">科室</a>
+                    <a href="#">疾病</a>
+                    <a href="#">医院</a>
+                </div>
+                <input type="text" name="search-content" class="ui-search-input" placeholder="请输入搜索内容">
+                <a href="#" class="ui-search-submit"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nav" class="nav">
+        <div class="wrap">
+            <a href="./index.html" onclick="window.open('./index.html')" class="link">首页</a>
+            <a href="./hospital.html" onclick="window.open('./hospital.html')" class="link nav_focus">按医院挂号</a>
+            <a href="./registration/hospital_detail.html" onclick="window.open('./registration/hospital_detail.html')" class="link">按科室挂号</a>
+            <a href="#" onclick="window.open('./department/index.html')" class="link">按疾病挂号</a>
+            <a href="#" class="link">最新公告</a>
+            <a href="#" class="link">社会知名医院</a>
+        </div>
+    </div>
+
+    <div class="filter ui-filter">
+        <div class="wrap">
+            <div class="group" data-search="getDistinctType">医院类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>|</span><a class="caption caption_focus">全部</a><span>|</span>
+            </div>
+            <div class="group" data-search="getDistinctLevel">医院等级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>|</span><a class="caption caption_focus">全部</a><span>|</span>
+            </div>
+            <div class="group" data-search="getDistinctArea">医院位置&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>|</span><a class="caption caption_focus">全部</a><span>|</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="datalist ui-datalist">
+    </div>
+
+    <div class="pagination ui-pagination">
+        <p class="text">首页</p>
+        <div class="prevBtn">0</div>
+        <div class="pageNum pageNum_focus">1</div>
+        <div class="nextBtn">0</div>
+        <p class="text">尾页</p>
+        <p class="text pageCount">共计1页</p>
+        <p class="text">到 <input type="number" class="number"> 页</p>
+        <a class="search-icon"></a>
+    </div>
+
+    <div id="footer" class="footer">
+        Copying &copy; 2016 XX医院版权所有
+    </div>
+    <script src="js/ui.js"></script>
+    <script src="js/data.js"></script>
+</body>
+
+</html>

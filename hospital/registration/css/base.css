@@ -1,0 +1,363 @@
+input{
+    border: none;
+    outline: none;
+}
+a{text-decoration: none;}
+p{
+    display: inline-block;
+}
+
+/* 页脚 样式设置 */
+.footer{
+    line-height: 72px;
+    text-align: center;
+    font-size: 12px;
+    color: #ACACAC;
+}
+
+/* 顶部 */
+.top{
+    color: #868686;
+    line-height: 30px;
+}
+.top .call{
+    padding-left: 20px;
+    background: url(../images/icon-call.png) no-repeat center left;
+    float: left;
+}
+.top .text{
+    float: right;
+}
+.top .text > a{
+    color: #2DA5E1;
+}
+
+/* 导航条 */
+.nav{
+    font-size: 0;
+}
+.nav .link{
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0 5px;
+    /* padding-left: 20px; */
+    color: #fff;
+    background-color: #60BFF2;
+    text-align: center;
+    line-height: 36px;
+}
+.nav .link:hover{
+    color: #efefef;
+}
+.nav .left-link{
+    width: 133px;
+    margin-left: 0;
+}
+.nav .right-link{
+    padding: 0;
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+}
+
+/* 医院介绍区域  样式 */
+.introduction .caption{
+    height: 54px;
+    line-height: 54px;
+    margin: 0 25px;
+}
+.introduction .caption .name{
+    font-size: 20px;
+    font-weight: lighter;
+    float: left;
+}
+.introduction .caption .name .follow{
+    font-size: 14px;
+    color: #F29600;
+}
+.introduction .caption .text{
+    float: right;
+}
+.introduction .caption .text .tit{
+    color: #0000FF;
+}
+.introduction .hospitalList{
+    margin: 0 25px;
+    border-top: solid 1px #DCDDDD;
+    position: relative;
+}
+.introduction .hospitalList .hospital-pic{
+    width: 202px;
+    height: 152px;
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+.introduction .hospitalList .detail{
+    display: block;
+    width: 465px;
+    position: absolute;
+    top: 15px;
+    left: 220px;
+}
+.introduction .hospitalList .detail .address,
+.introduction .hospitalList .detail .url,
+.introduction .hospitalList .detail .call,
+.introduction .hospitalList .detail .search{
+    padding-left: 20px;
+    color: #888888;
+    margin: 5px 0;
+    position: relative;
+}
+.introduction .hospitalList .detail .address::before,
+.introduction .hospitalList .detail .url::before,
+.introduction .hospitalList .detail .call::before,
+.introduction .hospitalList .detail .search::before{
+    content: ' ';
+    display: inline-block;
+    width: 16px;
+    height: 20.8px;
+    background: url(../images/icon-web.png) no-repeat 0 0;
+    position: absolute;
+    left: 0;
+}
+
+.introduction .hospitalList .detail .url::before{
+    background-position-y: -20.8px;
+}
+.introduction .hospitalList .detail .call::before{
+    background-position-y: -41.6px;
+}
+.introduction .hospitalList .detail .search::before{
+    background-position-y: -62.4px;
+}
+.introduction .hospitalList .map{
+    width: 252px;
+    height: 168px;
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+/* 医院体系 #tab 模块样式设置 */
+.tab .caption{
+    height: 30px;
+    font-size: 0;
+    border-bottom: solid 2px #60BFF2;
+}
+.tab .caption .item{
+    font-size: 16px;
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    color: #00B3EC;
+    text-align: center;
+    line-height: 30px;
+}
+.tab .caption .item_focus{
+    background-color: #60BFF2;
+    color: #fff;
+}
+.tab .content{
+    margin-top: 20px;
+}
+.tab .content .content-item{
+    display: none;
+}
+.tab .content .item_focus{
+    display: block;
+}
+/* 医院体系 #tab 预约挂号 中的 开放预约科室 样式设置 */
+.tab .content .content-item .department{
+    width: 710px;
+    height: 410px;
+    float: left;
+    border: solid 1px #F4F6FA;
+}
+.content-item .department .text{
+    display: block;
+    height: 42px;
+    font-size: 16px;
+    font-weight: lighter;
+    text-indent: 26px;
+    background-color: #F4F6FA;
+}
+.content-item .department .text > span{
+    line-height: 42px;
+}
+.content-item .department .department-category{
+    height: 368px;
+}
+.content-item .department .department-category .capltion{
+    width: 148px;
+    height: 368px;
+    background-color: #F2FBFF;
+    float: left;
+}
+.content-item .department .department-category .capltion .caption-item{
+    width: 148px;
+    height: 92px;
+    text-align: center;
+    color: #888888;
+    line-height: 40px;
+}
+.content-item .department .department-category .list{
+    float: right;
+    width: 546px;
+    height: 368px;
+    padding-left: 16px;
+    background-color: #fff;
+}
+.content-item .department .department-category .list .caption-item-content-list{
+    height: 92px;
+}
+.content-item .department .department-category .list .caption-item-content-list .department-name{
+    color: #4C4948;
+    line-height: 30px;
+    display: inline-block;
+    width: 120px;
+}
+/* 医院体系 #tab 预约挂号 中的 预约规则 样式设置 */
+.tab .content .content-item .rule{
+    width: 272px;
+    height: 285px;
+    float: right;
+    border: solid 1px #F4F6FA;
+    background-color: #fff;
+}
+.content-item .rule .text{
+    display: block;
+    height: 42px;
+    text-indent: 8px;
+    color: #555555;
+    font-size: 16px;
+    background-color: #F4F6FA;
+}
+.content-item .rule .text .placeholder{
+    color: #00B3EA;
+    font-size: 14px;
+    line-height: 42px;
+}
+
+.content-item .rule .detail{
+    width: 272px;
+    height: 243px;
+    overflow-y: auto;
+
+}
+.content-item .rule .detail .row{
+    line-height: 22px;
+}
+.content-item .rule .detail .row .tit{
+    width: 80px;
+    color: #555555;
+    vertical-align: text-top;
+    text-indent: 6px;
+}
+.content-item .rule .detail .row .con{
+    width: 192px;
+    color: #888888;
+}
+
+/* 医院体系 #tab  医院介绍 与 预约须知 样式设置 */
+.tab .content .content-item .text{
+    display: block;
+    color: #3F3F3F;
+    text-indent: 2em;
+    text-align: justify;
+    line-height: 22px;
+}
+
+.tab .content .content-item .reservation-caption{
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+}
+.tab .content .content-item .bold{
+    display: block;
+    font-size: bold;
+    color: #000;
+}
+.tab .content .content-item .notice{
+    display: block;
+    color: #555;
+}
+
+/* 医院体系 #tab  停诊信息 样式设置 */
+.content-item .stopDiagnosis-table{
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.content-item .stopDiagnosis-table .table-caption{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.content-item .stopDiagnosis-table .cell{
+    font-weight: normal;
+    border: solid 1px #DCDDDD;
+    padding: 0.3em 0;
+}
+.content-item .stopDiagnosis-table .thead .data{
+    width: 114px;
+}
+.content-item .stopDiagnosis-table .thead .tiem,
+.content-item .stopDiagnosis-table .thead .week{
+    width: 52px;
+}
+.content-item .stopDiagnosis-table .thead .departments{
+    width: 210px;
+}
+.content-item .stopDiagnosis-table .thead .speciality{
+    width: 50px;
+}
+.content-item .stopDiagnosis-table .thead .technical{
+    width: 150px;
+}
+.content-item .stopDiagnosis-table .thead .price{
+    width: 78px;
+}
+.content-item .stopDiagnosis-table .thead .noNum,
+.content-item .stopDiagnosis-table .thead .canNum{
+    width: 88px;
+}
+.content-item .stopDiagnosis-table .thead .way{
+    width: 90px;
+}
+
+/* 医院体系 #tab  查询取消 样式设置 */
+
+.content-item .form{
+    height: 200px;
+    margin: 60px 0 50px 0;
+    border-top: solid 1px #DCDDDD;
+    border-bottom: solid 1px #DCDDDD;
+    text-align: center;
+    line-height: 200px;
+    font-size: 16px;
+}
+.content-item .form .label{
+    margin-right: 5px;
+}
+.content-item .form .code{
+    width: 192px;
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px #DCDDDD;
+    text-indent: 5px;
+}
+.content-item .form .submit{
+    border: none;
+    color: #fff;
+    background-color: #00B3EC;
+    width: 110px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+
+

@@ -1,0 +1,48 @@
+
+/* ui-search */
+.ui-search{
+    width:326px;
+    height: 38px;
+    background: url(../images/ui-search.jpg) no-repeat center;
+    position: relative;
+}
+.ui-search-selected{
+    width: 70px;
+    height: 38px;
+    cursor: pointer;
+    line-height: 38px;
+    text-indent: 14px;
+    color: #fff;
+}
+.ui-search-select-list{
+    position: absolute;
+    width: 70px;
+    background-color: #fff;
+    z-index: 2;
+    display: none;
+}
+.ui-search-select-list > a{
+    display: block;
+    text-indent: 14px;
+    line-height: 20px;
+    color: #868686;
+}
+.ui-search-select-list > a:hover{
+    background-color: #CCC;
+}
+.ui-search-input{
+    position: absolute;
+    width: 216px;
+    height: 36px;
+    line-height: 38px;
+    top: 1px;
+    left: 70px;
+    text-indent: 5px;
+}
+.ui-search-submit{
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: 0;
+    right: 0;
+}
