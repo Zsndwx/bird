@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>视频播放器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            border: none;
+            outline: none;
+        }
+
+        html,
+        body {
+            font-family: "微软雅黑", Arial;
+            font-size: 14px;
+        }
+
+        .outerNode {
+            width: 540px;
+            height: 332px;
+            margin: 80px auto 80px;
+            box-shadow: 0 0 4px #5b606d;
+            background-color: #000;
+        }
+
+        .outerNode .videoNode {
+            width: 540px;
+            height: 305px;
+            float: left;
+        }
+
+        .outerNode .controlsNode {
+            width: 540px;
+            height: 27px;
+            float: left;
+            background: url(img/cts_bg.gif) repeat-x;
+        }
+
+        .outerNode .controlsNode .pauseNode,
+        .outerNode .controlsNode .playNode {
+            width: 13px;
+            height: 15px;
+            float: left;
+            margin: 6px 0 0 14px;
+            background: url(img/playNode.png) no-repeat;
+            cursor: pointer;
+        }
+
+        .outerNode .controlsNode .pauseNode {
+            background-image: url(img/pauseNode.png);
+        }
+
+        .outerNode .controlsNode .loadNode {
+            height: 10px;
+            width: 266px;
+            float: left;
+            margin: 9px 0 0 15px;
+            background: url(img/loadNode.png) repeat-x;
+            position: relative;
+        }
+
+        .outerNode .controlsNode .loadNode::after,
+        .outerNode .controlsNode .loadNode::before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 5px;
+            height: 10px;
+            background: url(img/loadNode_left.png) no-repeat;
+        }
+
+        .outerNode .controlsNode .loadNode::after {
+            left: auto;
+            right: -1px;
+            background: url(img/loadNode_right.png) no-repeat;
+        }
+
+        .outerNode .controlsNode .loadNode .crlNode {
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            background: url(img/crlNode.png) no-repeat center;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .outerNode .controlsNode .loadNode .lineNode {
+            width: 0%;
+            height: 7px;
+            position: absolute;
+            left: 0;
+            top: 1px;
+            background: url(img/lineNode.png) repeat-x;
+        }
+
+        .outerNode .controlsNode .loadNode .lineNode::after {
+            content: ' ';
+            display: block;
+            height: 7px;
+            background: url(img/lineNode_right.png) no-repeat right;
+        }
+
+        .outerNode .controlsNode .timeNode {
+            float: left;
+            width: 56px;
+            height: 10px;
+            margin: 9px 0 0 9px;
+            color: #fff;
+        }
+
+        .outerNode .controlsNode .timeNode>span {
+            font-size: 10px;
+            line-height: 10px;
+            float: left;
+        }
+
+        .outerNode .controlsNode .volume {
+            width: 19px;
+            height: 17px;
+            float: left;
+            background: url(img/volume.png) no-repeat;
+            margin: 5px 0 0 15px;
+        }
+
+        .outerNode .controlsNode .volumeline {
+            height: 10px;
+            width: 61px;
+            float: left;
+            background: url(img/volume_loadNode.png) repeat-x;
+            margin: 9px 0 0 3px;
+            position: relative;
+        }
+
+        .outerNode .controlsNode .volumeline::after,
+        .outerNode .controlsNode .volumeline::before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 10px;
+            background: url(img/volume_loadNode_left.png) no-repeat;
+        }
+
+        .outerNode .controlsNode .volumeline::after {
+            left: auto;
+            right: -1px;
+            background-image: url(img/volume_loadNode_right.png);
+        }
+
+        .outerNode .controlsNode .volumeline .volumeCrl {
+            position: absolute;
+            width: 15px;
+            height: 14px;
+            left: 0;
+            top: -2px;
+            background: url(img/volume_lineNode.png) no-repeat;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .outerNode .controlsNode .full {
+            width: 13px;
+            height: 15px;
+            float: left;
+            margin: 6px 0 0 50px;
+            background: url(img/fullNode.png) no-repeat;
+            cursor: pointer;
+            transition: 0.7s;
+        }
+
+        .outerNode .controlsNode .full:hover {
+            background-image: url(img/fullNode_hover.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerNode">
+        <video class="videoNode" src="./imooc.mp4" poster="img/poster.jpg"></video>
+        <div class="controlsNode">
+            <!-- 播放 元素 -->
+            <div class="playNode"></div>
+            <!-- 进度条元素 -->
+            <div class="loadNode">
+                <!-- 拖动进度条的按钮 -->
+                <div class="crlNode"></div>
+                <div class="lineNode"></div>
+            </div>
+            <!-- 时间元素 -->
+            <div class="timeNode">
+                <span class="now">1:30</span>
+                <span> - </span>
+                <span class="all">4:30</span>
+            </div>
+            <!-- 声音元素 -->
+            <div class="volume"></div>
+            <!-- 声音进度条元素 -->
+            <div class="volumeline">
+                <div class="volumeCrl"></div>
+            </div>
+            <!-- 全屏元素 -->
+            <div class="full"></div>
+        </div>
+    </div>
+    <script>
+        var loadNode = document.querySelector('.loadNode'); //进度条总
+        var playNode = document.getElementsByClassName('playNode')[0];
+        var videoNode = document.getElementsByClassName('videoNode')[0];
+
+        // 暂停 播放 事件
+        playNode.onclick = function () {
+            var isPlayer = this.classList.toggle('pauseNode');
+            if (isPlayer) {
+                videoNode.play();
+            } else {
+                videoNode.pause();
+            }
+        }
+
+        // 全屏
+        var fullNode = document.querySelector('.full');
+        fullNode.addEventListener('click', function () {
+            if (videoNode.webkitRequestFullscreen) {
+                videoNode.webkitRequestFullscreen();
+            } else if (videoNode.mozRequestFullScreen) {
+                videoNode.mozRequestFullScreen();
+            } else {
+                videoNode.requestFullscreen();
+            }
+        });
+
+        // 时间
+        var nowNode = document.querySelector('.now'); //当前时间
+        var allNode = document.querySelector('.all'); //总时间
+        // 进度条
+        var lineNode = document.querySelector('.lineNode');
+        // 视频加载完成后 获取总时间长度
+        videoNode.addEventListener('canplay', function () {
+            allNode.innerHTML = parseInt(this.duration / 60) + ':' + parseInt(this.duration % 60);
+        });
+        // 监听视频播放状态
+        videoNode.addEventListener('timeupdate', function () {
+            lineNode.style.width = (this.currentTime / this.duration) * 100 + '%';
+            crlNode.style.left = lineNode.offsetWidth - 7.5 + 'px';
+            nowNode.innerHTML = parseInt(this.currentTime / 60) + ':' + parseInt(this.currentTime % 60);
+        });
+
+        // 进度按钮图标
+        var crlNode = document.querySelector('.crlNode');
+
+        crlNode.onmousedown = function (e) {
+            var ev = e || event;
+            var l = ev.clientX - this.offsetLeft;
+            playNode.className = 'playNode';
+            videoNode.pause();
+            document.onmousemove = function (e) {
+                var ev = e || event;
+                var needX = ev.clientX - l;
+                var maxX = loadNode.offsetWidth - 7.5;
+
+                needX = needX > maxX ? maxX : needX;
+                needX = needX < 0 ? 0 : needX;
+                crlNode.style.left = needX + 'px';
+                // 进度条宽度 百分比
+                lineNode.style.width = ((crlNode.offsetLeft + 8) / loadNode.offsetWidth) * 100 + '%';
+            };
+            document.onmouseup = function () {
+                document.onmousemove = document.onmouseup = null;
+                videoNode.currentTime = videoNode.duration * ((crlNode.offsetLeft + 8) / loadNode.offsetWidth);
+                playNode.className = 'playNode pauseNode';
+                videoNode.play();
+            };
+            return false;
+        };
+
+        // 声音元素
+        var volumeCrl = document.querySelector('.volumeCrl');
+        volumeCrl.addEventListener('mousedown', function (e) {
+            var ev = e || event;
+            var l = ev.clientX - this.offsetLeft;
+            document.onmousemove = function (e) {
+                var ev = e || event;
+                var needX = ev.clientX - l;
+                var maxX = volumeCrl.parentNode.offsetWidth - 15;
+
+                needX = needX < 0 ? 0 : needX;
+                needX = needX > maxX ? maxX : needX;
+                volumeCrl.style.left = needX + 'px';
+                var lastVolume = needX / maxX;
+                videoNode.volume = lastVolume < 0 ? 0 : lastVolume;
+            };
+            document.onmouseup = function () {
+                document.onmousemove = document.onmouseup = null;
+            };
+            return false;
+        });
+    </script>
+</body>
+
+</html>
