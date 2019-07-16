@@ -1,0 +1,39 @@
+*{margin: 0;padding: 0;border: none;}
+a{text-decoration: none;color: black;}
+html,body{
+    width: 100%;
+    font-family: '微软雅黑';
+    background-color: #DEDDDE;
+}
+
+/* 瀑布流容器 */
+#wrap{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+#wrap > div{
+    float: left;
+    width: 180px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+}
+#wrap > div > img{
+    width: 100%;
+}
+#wrap > div > a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 40px;
+}
+#wrap > div > a:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
