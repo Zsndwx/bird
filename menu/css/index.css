@@ -1,0 +1,171 @@
+*{padding: 0;margin: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+body{width: 100;font-family: "微软雅黑";}
+
+/* 主体 */
+.main{
+    width:100%;
+    position: relative;
+}
+
+/* 广告 */
+.main .banner{
+    width: 1200px;
+    height: 460px;
+    margin: 30px auto;
+    overflow:hidden;
+    position: relative;
+}
+.main .banner .banner-pic{
+    width:100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.main .banner .banner-slide1{
+    background: url('../img/bg1.jpg') center center;
+}
+.main .banner .banner-slide2{
+    background: url('../img/bg2.jpg') center center;
+}
+.main .banner .banner-slide3{
+    background: url('../img/bg3.jpg') center center;
+}
+.main .banner .slide-active{
+    display: block;
+}
+
+
+/* 广告区上一张，下一张 按钮 */
+.main .banner .button{
+    width: 50px;
+    height: 100px;
+    background: url(../img/arrow.png) no-repeat center center;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 240px;
+    /* display: block; */
+}
+.main .banner .button:hover{
+    background-color: rgba(65, 61, 61, 0.8);
+    /* opacity: 0.8; */
+    /* filter: alpha(opacity=80); */
+}
+.main .banner .prev{
+    transform: rotate(180deg);
+}
+.main .banner .next{
+    left: auto;
+    right: 0;
+}
+
+/* 广告区 圆点按钮  */
+.main .banner .banner-circle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* background: pink; */
+    margin: 0 20px 20px 0;
+}
+.main .banner .banner-circle>span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255,0.5) inset;
+    cursor: pointer;
+    background: rgba(63,87,91,0.5);
+    margin-right: 15px;
+}
+.main .banner .banner-circle .active{
+    background: rgba(255,255,255,0.9);
+}
+
+
+/* 广告左边菜单背景框 */
+.main .banner .banner-box{
+    width: 240px;
+    height: 460px;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+/* banner广告左侧一级主菜单 */
+.main .banner .menu-title{
+    width: 240px;
+    height: 460px;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+.main .banner .menu-title .menu-item{
+    width: 100%;
+    height: 60px;
+    /* background: pink; */
+}
+.main .banner .menu-title .menu-item a{
+    display: block;
+    width: 210px;
+    height: 100%;
+    margin: 0 15px;
+    border-bottom: 1px rgba(255,255,255,0.2) solid;
+    color: #fff;
+    line-height: 70px;
+    /* background: pink; */
+}
+.main .banner .menu-title a span{
+    margin-left: 15px;
+}
+.main .banner .menu-title a i{
+    font-style: normal;
+    position: absolute;
+    right: 25px;
+    color:rgba(255, 255, 255,0.6);
+}
+
+
+/* 二级菜单 */
+.main .banner .menu-content{
+    position: absolute;
+    width: 700px;
+    height: 460px;
+    background: url('../img/fe.png') no-repeat center center;
+    top: 0;
+    z-index: 2;
+    left: 240px;
+}
+.main .banner .hide{
+    display: none;
+}
+.main .banner .menu-content .menu-sub{
+    width: 600px;
+    height: 460px;
+    /* border: 1px red solid; */
+    margin-left: 30px;
+    display: none;
+}
+.main .banner .menu-content .menu-sub .pTit{
+    font-weight: bold;
+    margin: 20px auto;
+    color: red;
+}
+.main .banner .menu-content .menu-sub .sub-row{
+    height: 40px;
+}
+.main .banner .menu-content .menu-sub .sub-row .bold{
+    font-weight: bold;
+}
+.main .banner .menu-content .menu-sub .sub-row a{
+    color: #969496;
+    margin:0 7px;
+}
+.main .banner .menu-content .menu-sub .sub-row .mr{
+    color: #4B4A4E;
+}
