@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a{text-decoration: none;}
+ul{list-style: none;}
+body{font-size: 16px;font-family: "Microsoft YaHei UI";min-width: 700px;}
+
+.clear{
+    clear: both;
+}
+
+/* header */
+.header{
+    width: 100%;
+    height: 80px;
+    background: #07CBC9;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    min-width: 1000px;
+}
+
+/* logo */
+.header .logo{
+    height: 80px;
+    /* border: solid 1px red; */
+    float: left;
+}
+.header .logo a img{
+    width: 260px; 
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 40px;
+    /* border: solid 1px red; */
+}
+
+/* nav */
+.header .nav{
+    /* width:500px; */
+    height: 80px;
+    float: right;
+    /* border: solid 1px red; */
+}
+.header .nav ul{
+    /* width: 500px; */
+    /* border: solid 1px red; */
+    height: 100%;
+    padding-right: 40px;
+}
+.header .nav ul li{
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    line-height: 80px;
+    float: left;
+}
+.header .nav ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+.header .nav ul li a:hover{
+    background-color: black;
+}
+
+/* main */
+.main{
+    width: 100%;
+    position: relative;
+    top: 80px;
+    /* border: solid 2px red; */
+}
+
+/* banner */
+.main .banner{
+    width: 100%;
+    /* border: 1px red solid; */
+    height: 500px;
+}
+.main .banner img{
+    width: 100%;
+    height: 100%;
+}
+.main .layermark{
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0,0,0, .35);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+/* login */
+.main .banner-login{
+    width: 404px;
+    height: 350px;
+    /* background-color: blue; */
+    position: absolute;
+    left: 0;right: 0;
+    margin:auto;
+    top: 75px;
+    z-index: 2;
+}
+.main .banner-login div{
+    width: 400px;
+    height: 30px;
+    /* background: #fff; */
+    margin:20px 0;
+    border: none;
+    color: #fff;
+}
+.main .banner-login div input{
+    width: 395px;
+    height: 100%;
+    background-color: transparent;
+    border-color: rgba(255,255,255, .5);
+    color: #fff;
+    padding-left: 5px;
+}
+.main .banner-login div input:hover{
+    border-color: aqua;
+}
+.main .banner-login textarea{
+    width: 395px;
+    padding-left: 5px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    color: #fff;
+}
+.main .banner-login textarea:hover{
+    border-color: aqua;
+}
+.main .banner-login .btn{
+    width: 120px;
+    height: 35px;
+    position: absolute;
+    left: 0;right: 0;
+    margin:0 auto;
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.main .banner-login .btn:hover{
+    background-color: aqua;
+    border-color: transparent;
+    opacity: 1;
+}
+
+/* container */
+.container{
+    width: 100%;
+}
+
+/* About */
+.container .about-top{
+    width: 800px;
+    height: 500px;
+    /* background: pink; */
+    margin: 0 auto;
+}
+.container .about-top h3{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 28px;
+}
+.container .about-top .line{
+    width: 15px;
+    /* height: 100px; */
+    border: 1px aqua solid;
+    margin: 0 auto;
+}
+.container .about-top .about-txt{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* content */
+/* .container .about-top .content div{
+    float: left;
+} */
+.container .about-top .content .left{
+    width: 200px;
+    height: 300px;
+    /* background: orange; */
+    position: absolute;
+    margin-top: -300px;
+}
+.container .about-top .content .middle{
+    width: 400px;
+    height: 300px;
+    /* background: aqua; */
+    margin-left: 200px;
+    float: left;
+}
+.container .about-top .content .right{
+    width: 200px;
+    height: 300px;
+    /* background-color: chartreuse; */
+    float: right;
+}
+
+/* about middle */
+.container .about-top .content .middle img{
+    width: 100%;
+    height: 100%;
+}
+
+/* about left */
+.container .about-top .content .left .tit{
+    width: 160px;
+    text-align: center;
+    font-size: 28px;
+}
+.container .about-top .content .left .rag{
+    width: 280px;
+    height: 160px;
+    background: #fff;
+    opacity: 0.5;
+    padding: 20px;
+    position: absolute;
+    top: 80px;
+}
+.container .about-top .content .left .com{
+    width: 300px;
+    height: 160px;
+    padding: 20px;
+    position: absolute;
+    top: 80px;
+}
+.container .about-top .content .left .com .btn{
+    border: solid 1px black;
+    background-color: black;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.container .about-top .content .left .com .btn:hover{
+    background: transparent;
+    color: #000;
+}
+
+/* about right */
+.container .about-top .content .right .rect{
+    width: 150px;
+    height: 100px;
+    border: 1px aqua solid;
+    margin: 0 0 20px 20px;
+}
+.container .about-top .content .right .rect .p1{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+.container .about-top .content .right .rect .p2{
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+}
+.container .about-top .content .right .rect hr{
+    width: 20px;
+    border-color: aqua;
+    margin:0 auto;
+}
+
+
+/* about pic */
+.container .about-bottom{
+    width: 100%;
+    min-width: 1000px;
+}
+.container .about-bottom .list{
+    width: 100%;
+    overflow: hidden;
+    zoom: 1;
+    /* background: pink; */
+}
+.container .about-bottom .list>div{
+    width:25%;
+    height: 300px;
+    float: left;
+}
+.container .about-bottom .list .pic img{
+    width: 100%;
+    height: 100%;
+}
+.container .about-bottom .list .pic-txtare{
+    background: #07CBC9;
+    /* padding: 10px; */
+    position: relative;
+}
+.container .about-bottom .list .pic-txtare .com{
+    width: 90%;
+    height: 90%;
+    /* border: solid 1px red; */
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: #F8F1F9;
+}
+.container .about-bottom .list .pic-txtare .com .com-top{
+    height: 70%;
+    /* border: 1px red solid; */
+
+}
+.container .about-bottom .list .pic-txtare .com .com-bottom{
+    height: 30%;
+    /* border: 1px red solid; */
+    /* text-align: center; */
+    /* display: inline-block; */
+    position: relative;
+}
+.container .about-bottom .list .pic-txtare .com .com-top .p1{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.container .about-bottom .list .pic-txtare .com .com-top .p2{
+    font-size: 14px;
+    /* font-weight: 100; */
+    padding-bottom: 10px;
+    color: #F7F5F5;
+}
+/* DOTO */
+.container .about-bottom .list .pic-txtare .com .com-top .p3{
+    /* font-family: serif; */
+    font-size: 12px;
+    /* padding-bottom: 30px; */
+    color: #DDDDD9;
+}
+.container .about-bottom .list .pic-txtare .com .com-bottom .btn{
+    width: 90px;
+    height: 35px;
+    position: absolute;
+    left: 0;right: 0;
+    margin: 10px auto 0;
+    background: black;
+    border-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.container .about-bottom .list .pic-txtare .com .btn:hover{
+    background-color: transparent;
+}
+ 
+
+/* GALLERY */
+.container .gallery{
+    width: 800px;
+    /* height: 700px; */
+    /* background: pink; */
+    margin: 0 auto;
+}
+.container .gallery .tit{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+.container .gallery hr{
+    width: 30px;
+    border-color: aqua;
+    margin: 10px auto;
+}
+.container .gallery .txt{
+    width: 550px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.container .gallery .pic{
+    width: 100%;
+    height: 210px;
+    margin-bottom: 30px;
+}
+.container .gallery .pic .chart{
+    width:240px;
+    height: 100%;
+    background: black;
+    float: left;
+    margin-left: 20px;
+    /* border: 1px red solid; */
+}
+.container .gallery .pic .chart dt img{
+    width: 100%;
+    height: 100%;
+}
+.container .gallery .pic .chart dd{
+    height: 40px;
+    /* border: 1px red solid; */
+    line-height: 40px;
+    /* text-align: center; */
+    color: #fff;
+    padding-left: 10px;
+}
+
+
+/* footer */
+.footer{
+    width: 100%;
+    height: 80px;
+    background: #07CBC9;
+    /* background: red; */
+    margin-top: 130px;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+}
