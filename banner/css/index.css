@@ -1,0 +1,75 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+body{width: 100%;font-family: "微软雅黑";}
+
+.main{
+    width: 100%;
+}
+
+/* 菜单 */
+.main .menu{
+    width: 1200px;
+    /* height: 500px; */
+    background: white;
+    margin: 30px auto;
+}
+
+/* 菜单标题 */
+.main .menu .menuItem{
+    width: 100%;
+    height: 60px;
+}
+.main .menu .menuItem .menu-title{
+    height: 100%;
+    /* overflow: hidden; */
+    font-size: 0;
+}
+.main .menu .menuItem .menu-title>li{
+    display: inline-block;
+    width: 300px;
+    height: 100%;
+    line-height: 60px;
+    /* background: pink; */
+    font-size: 26px;
+    text-align:center;
+}
+.main .menu .menuItem .menu-title .active{
+    background-color: yellow;
+}
+.main .menu .menuItem .menu-title li a{
+    color: rgba(0,0,0,0.5);
+}
+
+
+/* 菜单栏广告Banner图片 */
+.main .menu .menuBanner{
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    position: relative;
+}
+.main .menu .menuBanner .banner-pic{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.main .menu .menuBanner .slide-active{
+    display: block;
+}
+.main .menu .menuBanner .slide1{
+    background: url(../img/1.jpg) center center;
+}
+.main .menu .menuBanner .slide2{
+    background: url(../img/3.jpg) center center;
+}
+.main .menu .menuBanner .slide3{
+    background: url(../img/4.jpg) center center;
+}
+.main .menu .menuBanner .slide4{
+    background: url(../img/5.jpg) center center;
+}
