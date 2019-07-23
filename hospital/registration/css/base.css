@@ -50,6 +50,9 @@ p{
 .nav .link:hover{
     color: #efefef;
 }
+.nav .link_focus{
+    background-color: #1ea6ef;
+}
 .nav .left-link{
     width: 133px;
     margin-left: 0;

@@ -1,4 +1,4 @@
-//  ui-search 定义
+//  ui-search 定义 搜索选项下拉列表
 $.fn.UiSearch = function () {
     var ui = $(this);
     $('.ui-search-selected', ui).on('click', function () {
@@ -14,7 +14,7 @@ $.fn.UiSearch = function () {
     });
 }
 
-// ui-slider
+// ui-slider 幻灯片播放特效
 $.fn.UiSlider = function () {
     var ui = $(this);
     var timer = null;
@@ -183,7 +183,7 @@ $.fn.UiMenu = function () {
         });
 }
 
-// ui-filter
+// ui-filter 分页帅选条件  标题项
 $.fn.UiFilter = function () {
     var ui = $(this);
     var groups = $('.group', ui);
@@ -237,13 +237,14 @@ $.fn.UiFilter = function () {
  * @param {string} type 医院类型
  */
 $.fn.PaginationGetData = function(area, level, type, currentPage = 1){
+    // 一次性查询所有数据
     var datalist = AjaxRemoteGetData.getHospitalArrByFilter(type, level, area);
     datalist.shift();
     var page = {};
-    page.currentPage = currentPage;
-    page.data = datalist;
-    page.pageSize = 3;
-    page.pageCount = Math.ceil(datalist.length / 3);
+    page.currentPage = currentPage;   //当前页
+    page.data = datalist;   //所有数据
+    page.pageSize = 3;  //每页的数据量
+    page.pageCount = Math.ceil(datalist.length / 3);  //总页数
     if(page.currentPage > page.pageCount) page.currentPage = page.pageCount;
     // 分页内容 加载
     $().UiDatalist(page);
@@ -261,7 +262,7 @@ $.fn.UiDatalist = function (page) {
     if(page.currentPage > page.pageCount) page.currentPage = page.pageCount;
 
     var data = page.data.concat();
-    var currentContent = data.splice((page.currentPage-1)*3, 3);
+    var currentContent = data.splice((page.currentPage-1)*3, 3);  //分页数据
     // console.log('currentPage:',page.currentPage);
     // console.log('currentContent:',currentContent);
     // console.log('storage.hospital:', storage.hospital);
