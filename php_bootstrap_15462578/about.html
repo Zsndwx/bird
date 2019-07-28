@@ -52,10 +52,10 @@
     <section class="page-nav hidden-xs">
         <div class="container">
             <ul>
-                <a href="#women">
+                <a href="javascript:;" data-id="#women">
                     <li class="item_focus"><span>关于我们</span></li>
                 </a>
-                <a href="#ilf">
+                <a href="javascript:;" data-id="#touch">
                     <li><span>联系我们</span></li>
                 </a>
             </ul>
@@ -127,11 +127,21 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
         $(function () {
+            // 导航条点击事件
+            // 1.样式改变
+            // 2.链接点击后滑动页面
             var parentNode = $('.page-nav .item_focus').closest('a');
             var navList = parentNode.siblings().add(parentNode);
             navList.on('click', function () {
                 navList.children('.item_focus').removeClass('item_focus');
-                $(this).children('li').addClass('item_focus');
+                var $this = $(this);
+                $this.children('li').addClass('item_focus');
+                $this.trigger('move_to');
+            }).on('move_to', function(e) {
+                var id = e.target.getAttribute('data-id');
+                var that = $(id);
+                var h = that.position().top;
+                document.documentElement.scroll(0, h - 100);
             });
         });
     </script>
